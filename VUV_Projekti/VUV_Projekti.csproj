@@ -43,7 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aktivnost.cs" />
+    <Compile Include="ClanProjekta.cs" />
+    <Compile Include="Lokacija.cs" />
+    <Compile Include="Osoba.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Projekt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
