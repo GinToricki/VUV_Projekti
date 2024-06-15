@@ -97,7 +97,11 @@ namespace VUV_Projekti
         }
         static void Main(string[] args)
         {
-            Izbornik();
+
+            ClanProjekta c1 = new ClanProjekta("Tin", "Tinic", "1234567890", DateTime.Now);
+            ClanProjekta c2 = new ClanProjekta("ime2", "prezime2", "123421890", DateTime.Now);
+            Projekt p1 = new Projekt("teStniprojekt", new List<ClanProjekta> { c1, c2 }, null);
+            p1.IzbrisiClana();
             Console.ReadKey();
         }
     }

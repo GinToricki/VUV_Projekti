@@ -20,5 +20,83 @@ namespace VUV_Projekti
             _ListaAktivnosti = listaAktivnosti;
             _Obrisan = false;
         }
+
+        private bool PotvrdiOib(string oib)
+        {
+            //dodati da ne mogu biti 2 ista oiba
+            if(Int32.TryParse(oib, out int _) && oib.Length == 10)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public void DodavanjeClana()
+        {
+            try
+            {
+                Console.WriteLine("Unesite ime člana");
+                string ime = Console.ReadLine();
+                Console.WriteLine("Unesite prezime člana");
+                string prezime = Console.ReadLine();
+                Console.WriteLine("Unesite OIB člana");
+                string oib = Console.ReadLine();
+                while (PotvrdiOib(oib))
+                {
+                    Console.WriteLine("Ponovo unesite oib");
+                }
+                DateTime dob = DateTime.Now;
+                ClanProjekta noviClan = new ClanProjekta(ime, prezime, oib, dob);
+                Console.WriteLine("Uspijesno ste dodali clana Projekta");
+            }
+            catch (Exception E)
+            {
+                Console.WriteLine(E.Message);
+            }
+        }
+
+        private bool PotvrdiOdabir(int odabir, int brojClanova)
+        {
+            if(odabir > 0 && odabir < brojClanova)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void IzbrisiClana()
+        {
+            Console.WriteLine("Odaberite kojeg clana zelite izbrisati");
+            for (int i = 0; i < _ClanoviProjekta.Count; i++)
+            {
+                if (!_ClanoviProjekta[i].Obrisan)
+                {
+                    Console.WriteLine($"{i + 1}. {_ClanoviProjekta[i].Ime} {_ClanoviProjekta[i].Prezime}. ({_ClanoviProjekta[i].Oib})");
+                }
+            }
+            while (true)
+            {
+
+                try
+                {
+                    int odabir = Convert.ToInt32(Console.ReadLine());
+                    if(PotvrdiOdabir(odabir, _ClanoviProjekta.Count))
+                    {
+                        _ClanoviProjekta[odabir - 1].Obrisan = true;
+                        break;
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
+        }
     }
 }

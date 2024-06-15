@@ -16,5 +16,26 @@ namespace VUV_Projekti
             _Dob = dob;
             _Obrisan = false;
         }
+
+        public string Ime
+        {
+            get { return _Ime; }
+        }
+
+        public string Prezime
+        {
+            get { return _Prezime; }
+        }
+
+        public string Oib
+        {
+            get { return _Oib; }
+        }
+
+        public bool Obrisan
+        {
+            get { return _Obrisan; }
+            set { _Obrisan = value; }
+        }
     }
 }
