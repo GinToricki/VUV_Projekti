@@ -8,16 +8,18 @@ namespace VUV_Projekti
 {
     class Aktivnost
     {
+        private Guid _idAktivnosti;
         private string _Naziv;
         private string _Opis;
         private DateTime _VrijemePocetka;
         private DateTime _VrijemeKraja;
-        private string _IDProjekta;
+        private Guid _IDProjekta;
         private Lokacija _Lokacija;
         private ClanProjekta _ClanProjekta;
 
-        public Aktivnost(string naziv, string opis, DateTime VP, DateTime VK, string idProjekta, Lokacija lokacija, ClanProjekta clanProj)
+        public Aktivnost(Guid idAktivnosti,string naziv, string opis, DateTime VP, DateTime VK, Guid idProjekta, Lokacija lokacija, ClanProjekta clanProj)
         {
+            _idAktivnosti = idAktivnosti;
             _Naziv = naziv;
             _Opis = opis;
             _VrijemePocetka = VP;

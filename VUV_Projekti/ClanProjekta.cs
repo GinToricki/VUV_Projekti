@@ -8,8 +8,10 @@ namespace VUV_Projekti
 {
     class ClanProjekta : Osoba
     {
-        public ClanProjekta(string ime, string prezime, string oib, DateTime dob)
+        private Guid _id;
+        public ClanProjekta(Guid id,string ime, string prezime, string oib, DateTime dob)
         {
+            _id = id;
             _Ime = ime;
             _Prezime = prezime;
             _Oib = oib;

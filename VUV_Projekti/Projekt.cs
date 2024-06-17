@@ -8,17 +8,39 @@ namespace VUV_Projekti
 {
     class Projekt
     {
+        private Guid _IdProjekta;
         private string _ImeProjekta;
         private List<ClanProjekta> _ClanoviProjekta;
         private List<Aktivnost> _ListaAktivnosti;
         private bool _Obrisan;
 
-        public Projekt(string imeProjekta, List<ClanProjekta> clanoviProjekta, List<Aktivnost> listaAktivnosti)
+        public Projekt(Guid idProjekta, string imeProjekta, List<ClanProjekta> clanoviProjekta, List<Aktivnost> listaAktivnosti)
         {
+            _IdProjekta = idProjekta;
             _ImeProjekta = imeProjekta;
             _ClanoviProjekta = clanoviProjekta;
             _ListaAktivnosti = listaAktivnosti;
             _Obrisan = false;
+        }
+
+        public Guid IdProjekta
+        {
+            get { return _IdProjekta; }
+        }
+
+        public string ImeProjekta
+        {
+            get { return _ImeProjekta; }
+        }
+
+        public List<ClanProjekta> ClanoviProjekta
+        {
+            get { return _ClanoviProjekta; }
+        }
+
+        public List<Aktivnost> ListaAktivnosti
+        {
+            get { return _ListaAktivnosti; }
         }
 
         private bool PotvrdiOib(string oib)
@@ -49,7 +71,7 @@ namespace VUV_Projekti
                     Console.WriteLine("Ponovo unesite oib");
                 }
                 DateTime dob = DateTime.Now;
-                ClanProjekta noviClan = new ClanProjekta(ime, prezime, oib, dob);
+                ClanProjekta noviClan = new ClanProjekta(Guid.NewGuid(),ime, prezime, oib, dob);
                 Console.WriteLine("Uspijesno ste dodali clana Projekta");
             }
             catch (Exception E)

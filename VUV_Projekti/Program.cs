@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace VUV_Projekti
 {
@@ -33,24 +36,6 @@ namespace VUV_Projekti
 
         }
        
-        static void DodajClana()
-        {
-            try
-            {
-
-                Console.WriteLine("Unesite ime člana");
-                string ime = Console.ReadLine();
-                Console.WriteLine("Unesite prezime člana");
-                string prezime = Console.ReadLine();
-                Console.WriteLine("Unesite OIB člana");
-                string oib = Console.ReadLine();
-                DateTime dob = DateTime.Now;
-                ClanProjekta noviClan = new ClanProjekta(ime, prezime,oib, dob);
-            }catch(Exception E)
-            {
-                Console.WriteLine(E.Message);
-            }
-        }
         static void BrisanjeClana()
         {
 
@@ -81,7 +66,6 @@ namespace VUV_Projekti
                     case "5":
                         break;
                     case "6":
-                        DodajClana();
                         break;
                     case "7":
                         break;
@@ -97,11 +81,29 @@ namespace VUV_Projekti
         }
         static void Main(string[] args)
         {
+            string xml = "";
+            using(StreamReader sr = new StreamReader("C:\\Users\\exibo\\source\\repos\\VUV_Projekti\\VUV_Projekti\\Projekti.xml"))
+            {
+                xml = sr.ReadToEnd();
+            }
+            XmlDocument xmlObject = new XmlDocument();
+            xmlObject.LoadXml(xml);
+            XmlNode projektNode = xmlObject.SelectSingleNode("//Projekti");
+            projektNode.RemoveAll();
 
-            ClanProjekta c1 = new ClanProjekta("Tin", "Tinic", "1234567890", DateTime.Now);
-            ClanProjekta c2 = new ClanProjekta("ime2", "prezime2", "123421890", DateTime.Now);
-            Projekt p1 = new Projekt("teStniprojekt", new List<ClanProjekta> { c1, c2 }, null);
+            ClanProjekta c1 = new ClanProjekta(Guid.NewGuid(),"Tin", "Tinic", "1234567890", DateTime.Now) ;
+            ClanProjekta c2 = new ClanProjekta(Guid.NewGuid(),"ime2", "prezime2", "123421890", DateTime.Now);
+            Projekt p1 = new Projekt(Guid.NewGuid(),"teStniprojekt", new List<ClanProjekta> { c1, c2 }, null);
             p1.IzbrisiClana();
+            XmlNode noviNode = xmlObject.CreateNode(XmlNodeType.Element, "projekt", null);
+            XmlAttribute idAttr = xmlObject.CreateAttribute("id");
+            idAttr.Value = p1.IdProjekta.ToString();
+            noviNode.Attributes.Append(idAttr);
+            XmlAttribute imeAttr = xmlObject.CreateAttribute("ime");
+            imeAttr.Value = p1.ImeProjekta;
+            noviNode.Attributes.Append(imeAttr);
+            projektNode.AppendChild(noviNode);
+            xmlObject.Save("C:\\Users\\exibo\\source\\repos\\VUV_Projekti\\VUV_Projekti\\Projekti.xml");
             Console.ReadKey();
         }
     }
