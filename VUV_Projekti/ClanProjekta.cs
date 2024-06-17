@@ -18,7 +18,10 @@ namespace VUV_Projekti
             _Dob = dob;
             _Obrisan = false;
         }
-
+        public Guid Id
+        {
+            get { return _id; }
+        }
         public string Ime
         {
             get { return _Ime; }
