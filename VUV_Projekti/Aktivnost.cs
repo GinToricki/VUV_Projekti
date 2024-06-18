@@ -13,18 +13,16 @@ namespace VUV_Projekti
         private string _Opis;
         private DateTime _VrijemePocetka;
         private DateTime _VrijemeKraja;
-        private Guid _IDProjekta;
         private Lokacija _Lokacija;
-        private ClanProjekta _ClanProjekta;
+        private List<ClanProjekta> _ClanProjekta;
 
-        public Aktivnost(Guid idAktivnosti,string naziv, string opis, DateTime VP, DateTime VK, Guid idProjekta, Lokacija lokacija, ClanProjekta clanProj)
+        public Aktivnost(Guid idAktivnosti,string naziv, string opis, DateTime VP, DateTime VK, Lokacija lokacija, List<ClanProjekta> clanProj)
         {
             _idAktivnosti = idAktivnosti;
             _Naziv = naziv;
             _Opis = opis;
             _VrijemePocetka = VP;
             _VrijemeKraja = VK;
-            _IDProjekta = idProjekta;
             _Lokacija = lokacija;
             _ClanProjekta = clanProj;
         }

@@ -1,4 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Projekti>
-  <projekt id="95590d1c-8cbe-445f-b8ad-bbf0e4eb01a6" ime="teStniprojekt" />
+  <Projekt _id="3beb3686-fe6b-46f8-ba16-cff7a466e8a0" _ime="teStniprojekt">
+    <Clanovi>
+      <Clan _id="65dcdd0c-a638-4cc2-ac64-7e94ef80b893" _ime="Tin" _prezime="Tinic" _oib="1234567890" _obrisan="False" />
+      <Clan _id="2de09753-8edf-40d6-ac8b-f4975e5d4ddf" _ime="Marko" _prezime="Maric" _oib="3106465331" _obrisan="False" />
+    </Clanovi>
+  </Projekt>
+  <Projekt _id="5e0a5926-1370-479d-8b26-0cce83c8caa1" _ime="NavySnail">
+    <Clanovi>
+      <Clan _id="7bfbd7ea-ed7e-4aab-88c4-a865c3de5775" _ime="Iva" _prezime="Ivic" _oib="7329962608" _obrisan="False" />
+      <Clan _id="3dc3d64e-0673-431b-a2dd-abb45f6022ad" _ime="Ana" _prezime="Anic" _oib="3255805385" _obrisan="False" />
+      <Clan _id="96d8ca25-40ff-46a7-a6f6-9b5d92abf4e2" _ime="Lucija" _prezime="Lucic" _oib="7445589915" _obrisan="False" />
+    </Clanovi>
+  </Projekt>
+  <Projekt _id="f0cc2e88-6ac4-4544-8dd0-d93ead81c92b" _ime="BlackFlea">
+    <Clanovi>
+      <Clan _id="7ec8c9c5-99fa-481b-9c7d-9fb74b7f46a5" _ime="Lara" _prezime="Zeljko" _oib="7107203201" _obrisan="False" />
+      <Clan _id="60d93dd8-47c4-44de-b2c0-1fddfc652a62" _ime="Neven" _prezime="Pavlovic" _oib="1892122323" _obrisan="False" />
+      <Clan _id="87f1360c-a68e-427c-b7f8-b657c9f4f1d9" _ime="Ivan" _prezime="Kanjka" _oib="8535913317" _obrisan="False" />
+    </Clanovi>
+  </Projekt>
+  <Projekt _id="d754393a-0174-460f-9d3a-9c6181ee4e7e" _ime="NavySnail">
+    <Clanovi>
+      <Clan _id="04aa304f-85bf-450a-8e72-c46416be9b4d" _ime="Filip" _prezime="Stanja" _oib="4396431148" _obrisan="False" />
+      <Clan _id="d8e2a4cb-20e0-4541-a3c6-dde7d6a12d14" _ime="Micoje" _prezime="Stanja" _oib="8484462278" _obrisan="False" />
+      <Clan _id="2d96ecfd-26de-47b5-98dd-22269ce1096b" _ime="Fran" _prezime="Jurkic" _oib="5767991886" _obrisan="False" />
+    </Clanovi>
+  </Projekt>
+  <Projekt _id="170296c6-afdf-4243-b476-138c0008a9ee" _ime="NavySnail">
+    <Clanovi>
+      <Clan _id="0160b487-e118-411e-8c70-f2415126b889" _ime="Domagoj" _prezime="Paukovic" _oib="7465203617" _obrisan="False" />
+      <Clan _id="af59c8ff-abc3-40c6-b841-040832f9ab0b" _ime="Sebastijan" _prezime="Senic" _oib="9769384345" _obrisan="False" />
+      <Clan _id="00d2cb87-0cc7-4e10-aa37-1c2d85b729e7" _ime="Luka" _prezime="Petras" _oib="3995890681" _obrisan="False" />
+    </Clanovi>
+  </Projekt>
 </Projekti>

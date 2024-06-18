@@ -81,18 +81,10 @@ namespace VUV_Projekti
         }
         static void Main(string[] args)
         {
-            string xml = "";
-            using(StreamReader sr = new StreamReader(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\ClanoviProjekta.xml"))
-            {
-                xml = sr.ReadToEnd();
-            }
-            XmlDocument xmlObject = new XmlDocument();
-            xmlObject.LoadXml(xml);
-            XmlNode projektNode = xmlObject.SelectSingleNode("//Clanovi");
-            projektNode.RemoveAll();
 
-            ClanProjekta c1 = new ClanProjekta(Guid.NewGuid(),"Tin", "Tinic", "1234567890", DateTime.Now) ;
-            ClanProjekta c2 = new ClanProjekta(Guid.NewGuid(),"Marko", "Maric", "3106465331", DateTime.Now);
+
+            ClanProjekta c1 = new ClanProjekta(Guid.NewGuid(), "Tin", "Tinic", "1234567890", DateTime.Now);
+            ClanProjekta c2 = new ClanProjekta(Guid.NewGuid(), "Marko", "Maric", "3106465331", DateTime.Now);
             ClanProjekta c3 = new ClanProjekta(Guid.NewGuid(), "Luka", "Lukic", "4001141091", DateTime.Now);
             ClanProjekta c4 = new ClanProjekta(Guid.NewGuid(), "Iva", "Ivic", "7329962608", DateTime.Now);
             ClanProjekta c5 = new ClanProjekta(Guid.NewGuid(), "Ana", "Anic", "3255805385", DateTime.Now);
@@ -109,8 +101,90 @@ namespace VUV_Projekti
 
             List<ClanProjekta> clanovi = new List<ClanProjekta>() { c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15 };
 
+            Lokacija l1 = new Lokacija("Savska cesta 32", "10000", "Zagreb", "45.815399", "15.966568");
+            Lokacija l2 = new Lokacija("Poduzetnička zona 2", "33000", "Virovitica", "45.83194", "17.38389");
+            Lokacija l3 = new Lokacija("IT park Osijek 1", "31000", "Osijek", "45.55111", "18.69389");
 
-            foreach(ClanProjekta cp in clanovi)
+
+            Aktivnost a1 = new Aktivnost(Guid.NewGuid(), "Promjeni sučelje", "Promjeni sučelje aplikacije", DateTime.Now, DateTime.Now, l1, new List<ClanProjekta> { c1, c2, c3 });
+            Aktivnost a2 = new Aktivnost(Guid.NewGuid(), "Promjeni sučelje", "Promjeni sučelje aplikacije", DateTime.Now, DateTime.Now, l1, new List<ClanProjekta> { c4, c5, c6 });
+            Aktivnost a3 = new Aktivnost(Guid.NewGuid(), "Promjeni sučelje", "Promjeni sučelje aplikacije", DateTime.Now, DateTime.Now, l1, new List<ClanProjekta> { c7, c8, c9 });
+            Aktivnost a4 = new Aktivnost(Guid.NewGuid(), "Promjeni sučelje", "Promjeni sučelje aplikacije", DateTime.Now, DateTime.Now, l1, new List<ClanProjekta> { c10, c11, c12 });
+            Aktivnost a5 = new Aktivnost(Guid.NewGuid(), "Promjeni sučelje", "Promjeni sučelje aplikacije", DateTime.Now, DateTime.Now, l1, new List<ClanProjekta> { c13, c14, c15 });
+
+
+            Projekt p1 = new Projekt(Guid.NewGuid(), "teStniprojekt", new List<ClanProjekta> { c1, c2 }, null);
+            Projekt p2 = new Projekt(Guid.NewGuid(), "NavySnail", new List<ClanProjekta> { c4, c5, c6 }, new List<Aktivnost> { a2 });
+            Projekt p3 = new Projekt(Guid.NewGuid(), "BlackFlea", new List<ClanProjekta> { c7, c8, c9 }, new List<Aktivnost> { a3 });
+            Projekt p4 = new Projekt(Guid.NewGuid(), "NavySnail", new List<ClanProjekta> { c10, c11, c12 }, new List<Aktivnost> { a4 });
+            Projekt p5 = new Projekt(Guid.NewGuid(), "NavySnail", new List<ClanProjekta> { c13, c14, c15 }, new List<Aktivnost> { a5 });
+
+            List<Projekt> lProjekta = new List<Projekt>() { p1, p2, p3, p4, p5 };
+
+            string xml = "";
+            using (StreamReader sr = new StreamReader(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\Projekti.xml"))
+            {
+                xml = sr.ReadToEnd();
+            }
+            XmlDocument xmlObject = new XmlDocument();
+            xmlObject.LoadXml(xml);
+            XmlNode projektNode = xmlObject.SelectSingleNode("//Projekti");
+            projektNode.RemoveAll();
+
+            foreach (Projekt p in lProjekta)
+            {
+                XmlNode noviNode = xmlObject.CreateNode(XmlNodeType.Element, "Projekt", null);
+                XmlAttribute idAttr = xmlObject.CreateAttribute("_id");
+                idAttr.Value = p.IdProjekta.ToString();
+                noviNode.Attributes.Append(idAttr);
+                XmlAttribute imeAttr = xmlObject.CreateAttribute("_ime");
+                imeAttr.Value = p.ImeProjekta;
+                noviNode.Attributes.Append(imeAttr);
+                XmlNode clanoviNode = xmlObject.CreateNode(XmlNodeType.Element, "Clanovi", null);
+                foreach (ClanProjekta cp in p.ClanoviProjekta)
+                {
+                    XmlNode noviNode2 = xmlObject.CreateNode(XmlNodeType.Element, "Clan", null);
+                    XmlAttribute idAttr2 = xmlObject.CreateAttribute("_id");
+                    idAttr2.Value = cp.Id.ToString();
+                    noviNode2.Attributes.Append(idAttr2);
+                    XmlAttribute imeAttr2 = xmlObject.CreateAttribute("_ime");
+                    imeAttr2.Value = cp.Ime;
+                    noviNode2.Attributes.Append(imeAttr2);
+                    XmlAttribute prezimeAttr = xmlObject.CreateAttribute("_prezime");
+                    prezimeAttr.Value = cp.Prezime;
+                    noviNode2.Attributes.Append(prezimeAttr);
+                    XmlAttribute OibAttr = xmlObject.CreateAttribute("_oib");
+                    OibAttr.Value = cp.Oib;
+                    noviNode2.Attributes.Append(OibAttr);
+                    XmlAttribute IzbrisanAttr = xmlObject.CreateAttribute("_obrisan");
+                    IzbrisanAttr.Value = cp.Obrisan.ToString();
+                    noviNode2.Attributes.Append(IzbrisanAttr);
+
+                    clanoviNode.AppendChild(noviNode2);
+                }
+                noviNode.AppendChild(clanoviNode);
+                projektNode.AppendChild(noviNode);
+            }
+
+            xmlObject.Save(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\Projekti.xml");
+            Console.ReadKey();
+        }
+    }
+}
+
+
+/*
+ string xml = "";
+            using (StreamReader sr = new StreamReader(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\ClanoviProjekta.xml"))
+            {
+                xml = sr.ReadToEnd();
+            }
+            XmlDocument xmlObject = new XmlDocument();
+            xmlObject.LoadXml(xml);
+            XmlNode projektNode = xmlObject.SelectSingleNode("//Clanovi");
+            projektNode.RemoveAll();
+
+            foreach (ClanProjekta cp in clanovi)
             {
                 XmlNode noviNode = xmlObject.CreateNode(XmlNodeType.Element, "ClanProjekta", null);
                 XmlAttribute idAttr = xmlObject.CreateAttribute("_id");
@@ -132,10 +206,6 @@ namespace VUV_Projekti
                 projektNode.AppendChild(noviNode);
             }
 
-            Projekt p1 = new Projekt(Guid.NewGuid(),"teStniprojekt", new List<ClanProjekta> { c1, c2 }, null);
-            p1.IzbrisiClana();
             xmlObject.Save(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\ClanoviProjekta.xml");
-            Console.ReadKey();
-        }
-    }
-}
+ 
+ */
