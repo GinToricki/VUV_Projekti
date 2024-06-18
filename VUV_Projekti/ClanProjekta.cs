@@ -42,5 +42,10 @@ namespace VUV_Projekti
             get { return _Obrisan; }
             set { _Obrisan = value; }
         }
+
+        public DateTime Dob
+        {
+            get { return _Dob; }
+        }
     }
 }

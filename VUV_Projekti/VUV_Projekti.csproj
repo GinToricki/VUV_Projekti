@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Aktivnost.cs" />
     <Compile Include="ClanProjekta.cs" />
+    <Compile Include="DatotetaKlasa.cs" />
     <Compile Include="Lokacija.cs" />
     <Compile Include="Osoba.cs" />
     <Compile Include="Program.cs" />
@@ -55,13 +56,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Lokacije.xml" />
     <Content Include="Projekti.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ClanoviProjekta.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Aktivnosti.xml" />
+    <Content Include="Aktivnosti.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

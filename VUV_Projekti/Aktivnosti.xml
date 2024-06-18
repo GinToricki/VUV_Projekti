@@ -1,4 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Aktivnosti>
-	
+  <Aktivnost _id="2baf4f10-a75a-479b-801d-8119cf45e85e" _naziv="Promjeni sučelje" _opis="Promjeni sučelje aplikacije" _vp="6/19/2024 1:51:17 AM" _vk="6/19/2024 1:51:17 AM" _idLokacije="137f204d-3f66-45a2-b5cc-4ab8db0801f2">
+    <Clanovi>
+      <Clan _id="d50fd48b-7f73-43ab-a651-e50eaa25a2a3" />
+      <Clan _id="23f29221-9f44-4ceb-a293-2a3deeb338a1" />
+      <Clan _id="662337d5-76cc-4e54-bac2-5ef16e5f0d99" />
+    </Clanovi>
+  </Aktivnost>
+  <Aktivnost _id="d9d855d4-2b4d-47be-a37c-db653a74d534" _naziv="Update Logo" _opis="Promjeni stari logo u novi poboljsani logo" _vp="6/19/2024 1:51:17 AM" _vk="6/19/2024 1:51:17 AM" _idLokacije="d737a53d-6f8c-492a-99e1-9100ee2a854e">
+    <Clanovi>
+      <Clan _id="dccaf59f-a77c-4b12-a786-d290e8138b9f" />
+      <Clan _id="40efe34c-e4a5-4a0a-b3d1-6c9cfb2fa2a2" />
+      <Clan _id="ee7ca944-99fb-41d6-90ca-91d04351e106" />
+    </Clanovi>
+  </Aktivnost>
+  <Aktivnost _id="beae2a57-2549-4878-a9d8-8f718fbe98c4" _naziv="Kupi materijal" _opis="Kupi novi materijal" _vp="6/19/2024 1:51:17 AM" _vk="6/19/2024 1:51:17 AM" _idLokacije="d737a53d-6f8c-492a-99e1-9100ee2a854e">
+    <Clanovi>
+      <Clan _id="76a34ef2-ad31-4f65-aebd-7ad47ba6b283" />
+      <Clan _id="6fcdb65c-09c8-40bc-9524-48990e7c60ae" />
+      <Clan _id="977c76bf-c97d-4ab7-afd2-2da9a5c56758" />
+    </Clanovi>
+  </Aktivnost>
+  <Aktivnost _id="94dfe021-21a9-4075-a40a-a95d77f17e7d" _naziv="Business meeting" _opis="Poslovni sastanak s klijentom" _vp="6/19/2024 1:51:17 AM" _vk="6/19/2024 1:51:17 AM" _idLokacije="23aa063d-0c48-4f5d-8ecd-1f83d4e2bc99">
+    <Clanovi>
+      <Clan _id="51e0f24e-6fdb-4be2-a5b3-d729239a50e7" />
+      <Clan _id="510adddc-4488-436a-884e-875d145e1527" />
+      <Clan _id="def8bd83-0ef1-4807-928d-1c0a6d22b110" />
+    </Clanovi>
+  </Aktivnost>
+  <Aktivnost _id="adb29ef0-f12d-4824-b813-264bdb6c5b4a" _naziv="Obojaj Ured" _opis="Obojaj ured iz zute u plavu" _vp="6/19/2024 1:51:17 AM" _vk="6/19/2024 1:51:17 AM" _idLokacije="23aa063d-0c48-4f5d-8ecd-1f83d4e2bc99">
+    <Clanovi>
+      <Clan _id="2260c4f2-c1d7-4a9e-8a4b-49be2434e2e4" />
+      <Clan _id="5f383caa-ac83-4d9f-ae4d-b334ac27a77e" />
+      <Clan _id="2d25bf58-9eae-4a4f-a363-717a885d3d95" />
+    </Clanovi>
+  </Aktivnost>
 </Aktivnosti>

@@ -10,20 +10,20 @@ namespace VUV_Projekti
     {
         private Guid _IdProjekta;
         private string _ImeProjekta;
-        private List<ClanProjekta> _ClanoviProjekta;
         private List<Guid> _ListaIdClanova;
-        private List<Aktivnost> _ListaAktivnosti;
         private List<Guid> _ListaIdAktivnosti;
+        private string _Nositelj;
+        private Guid _idVoditelja;
         private bool _Obrisan;
 
-        public Projekt(Guid idProjekta, string imeProjekta, List<ClanProjekta> clanoviProjekta, List<Aktivnost> listaAktivnosti, List<Guid> lIdAktivnosti, List<Guid> ListaIdClanova)
+        public Projekt(Guid idProjekta, string imeProjekta,List<Guid> lIdAktivnosti, List<Guid> ListaIdClanova, Guid idVoditelja, string nositelj)
         {
             _IdProjekta = idProjekta;
             _ImeProjekta = imeProjekta;
-            _ClanoviProjekta = clanoviProjekta;
-            _ListaAktivnosti = listaAktivnosti;
             _ListaIdAktivnosti = lIdAktivnosti;
             _ListaIdClanova = ListaIdClanova;
+            _Nositelj = nositelj;
+            _idVoditelja = idVoditelja;
             _Obrisan = false;
         }
 
@@ -31,6 +31,16 @@ namespace VUV_Projekti
         public Guid IdProjekta
         {
             get { return _IdProjekta; }
+        }
+
+        public string Nositelj
+        {
+            get { return _Nositelj; }
+        }
+
+        public Guid IdVoditelja
+        {
+            get { return _idVoditelja; }
         }
 
         public string ImeProjekta
@@ -45,15 +55,6 @@ namespace VUV_Projekti
         public List<Guid> ListaIdClanova
         {
             get { return _ListaIdClanova; }
-        }
-        public List<ClanProjekta> ClanoviProjekta
-        {
-            get { return _ClanoviProjekta; }
-        }
-
-        public List<Aktivnost> ListaAktivnosti
-        {
-            get { return _ListaAktivnosti; }
         }
 
         public bool Obrisan
@@ -110,33 +111,6 @@ namespace VUV_Projekti
             }
         }
 
-        public void IzbrisiClana()
-        {
-            Console.WriteLine("Odaberite kojeg clana zelite izbrisati");
-            for (int i = 0; i < _ClanoviProjekta.Count; i++)
-            {
-                if (!_ClanoviProjekta[i].Obrisan)
-                {
-                    Console.WriteLine($"{i + 1}. {_ClanoviProjekta[i].Ime} {_ClanoviProjekta[i].Prezime}. ({_ClanoviProjekta[i].Oib})");
-                }
-            }
-            while (true)
-            {
-
-                try
-                {
-                    int odabir = Convert.ToInt32(Console.ReadLine());
-                    if(PotvrdiOdabir(odabir, _ClanoviProjekta.Count))
-                    {
-                        _ClanoviProjekta[odabir - 1].Obrisan = true;
-                        break;
-                    }
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
-        }
+        
     }
 }

@@ -15,8 +15,10 @@ namespace VUV_Projekti
         private DateTime _VrijemeKraja;
         private Lokacija _Lokacija;
         private List<ClanProjekta> _ClanProjekta;
+        private Guid _idLokacije;
+        private List<Guid> _lIdClanovaProjekta;
 
-        public Aktivnost(Guid idAktivnosti,string naziv, string opis, DateTime VP, DateTime VK, Lokacija lokacija, List<ClanProjekta> clanProj)
+        public Aktivnost(Guid idAktivnosti, string naziv, string opis, DateTime VP, DateTime VK, Lokacija lokacija, List<ClanProjekta> clanProj, Guid idLokacije, List<Guid> lIdClanovaProjekta)
         {
             _idAktivnosti = idAktivnosti;
             _Naziv = naziv;
@@ -25,6 +27,8 @@ namespace VUV_Projekti
             _VrijemeKraja = VK;
             _Lokacija = lokacija;
             _ClanProjekta = clanProj;
+            _idLokacije = idLokacije;
+            _lIdClanovaProjekta = lIdClanovaProjekta;
         }
 
         public Guid IdAktivnosti
@@ -46,7 +50,7 @@ namespace VUV_Projekti
         {
             get { return _VrijemePocetka; }
         }
-         
+
         public DateTime VrijemeKraja
         {
             get { return _VrijemeKraja; }
@@ -60,6 +64,16 @@ namespace VUV_Projekti
         public List<ClanProjekta> ClanoviProjekta
         {
             get { return _ClanProjekta; }
+        }
+
+        public Guid IdLokacije
+        {
+            get { return _idLokacije; }
+        }
+
+        public List<Guid> LIdClanovaProjekta
+        {
+            get { return _lIdClanovaProjekta; }
         }
     }
 }

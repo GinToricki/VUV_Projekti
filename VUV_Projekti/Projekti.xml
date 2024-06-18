@@ -1,53 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Projekti>
-  <Projekt _id="ab22fbbc-4ffa-4bb0-903f-15d3cf17eee1" _ime="teStniprojekt" _obrisan="False">
+  <Projekt _id="3fbf43a4-67d9-459f-981b-527d325685cc" _ime="teStniprojekt" _obrisan="False" _idVoditelja="d50fd48b-7f73-43ab-a651-e50eaa25a2a3" _nositelj="Marko Maric">
     <Clanovi>
-      <Clan _id="1daaff54-a9fe-4cd4-94a9-28adb55e341e" />
-      <Clan _id="d3f37b01-a7f5-488d-9898-e13158c11f77" />
-      <Clan _id="d6cd579e-ec25-4a46-b16c-484ab09ea268" />
+      <Clan _id="d50fd48b-7f73-43ab-a651-e50eaa25a2a3" />
+      <Clan _id="23f29221-9f44-4ceb-a293-2a3deeb338a1" />
+      <Clan _id="662337d5-76cc-4e54-bac2-5ef16e5f0d99" />
     </Clanovi>
     <Aktivnosti>
-      <Aktivnost _id="6e354f0a-6ce3-4e1d-a125-8cbb4be1a290" />
+      <Aktivnost _id="2baf4f10-a75a-479b-801d-8119cf45e85e" />
     </Aktivnosti>
   </Projekt>
-  <Projekt _id="6f4b220d-e9eb-463f-92a4-5150b06a6d9b" _ime="NavySnail" _obrisan="False">
+  <Projekt _id="59c5ed02-0071-4fa9-8cf6-49c27bc33481" _ime="NavySnail" _obrisan="False" _idVoditelja="dccaf59f-a77c-4b12-a786-d290e8138b9f" _nositelj="Ana Anic">
     <Clanovi>
-      <Clan _id="8c3d3555-a2e0-46e4-8e0c-93b68bc64337" />
-      <Clan _id="2c134983-3223-4142-9123-bf105e1757dc" />
-      <Clan _id="b90605d6-42dc-4b88-956e-a7d62e579249" />
+      <Clan _id="dccaf59f-a77c-4b12-a786-d290e8138b9f" />
+      <Clan _id="40efe34c-e4a5-4a0a-b3d1-6c9cfb2fa2a2" />
+      <Clan _id="ee7ca944-99fb-41d6-90ca-91d04351e106" />
     </Clanovi>
     <Aktivnosti>
-      <Aktivnost _id="2c7a468e-81bc-4f77-8fe9-6ee5201e9c62" />
+      <Aktivnost _id="d9d855d4-2b4d-47be-a37c-db653a74d534" />
     </Aktivnosti>
   </Projekt>
-  <Projekt _id="1818003c-c47b-44ec-afa3-348fb1f96507" _ime="BlackFlea" _obrisan="False">
+  <Projekt _id="299d2ab9-e680-4f91-b3c4-d6a13a248b3f" _ime="BlackFlea" _obrisan="False" _idVoditelja="76a34ef2-ad31-4f65-aebd-7ad47ba6b283" _nositelj="Luka Lukic">
     <Clanovi>
-      <Clan _id="c43ee296-63fa-43a8-9875-6fb9f5d9360a" />
-      <Clan _id="79af74d5-02e2-41b4-a434-9643982b274d" />
-      <Clan _id="ef806cf5-493d-4780-9aff-f1d3b5c7ef17" />
+      <Clan _id="76a34ef2-ad31-4f65-aebd-7ad47ba6b283" />
+      <Clan _id="6fcdb65c-09c8-40bc-9524-48990e7c60ae" />
+      <Clan _id="977c76bf-c97d-4ab7-afd2-2da9a5c56758" />
     </Clanovi>
     <Aktivnosti>
-      <Aktivnost _id="69ff4425-a96a-49ff-82c1-ad66bb14cd87" />
+      <Aktivnost _id="beae2a57-2549-4878-a9d8-8f718fbe98c4" />
     </Aktivnosti>
   </Projekt>
-  <Projekt _id="f1a5fd9a-e497-4149-a2e7-da8bf5ef809b" _ime="NavySnail" _obrisan="False">
+  <Projekt _id="04284c20-463a-4300-bb1e-643eec56c7ad" _ime="AquaTitanium" _obrisan="False" _idVoditelja="51e0f24e-6fdb-4be2-a5b3-d729239a50e7" _nositelj="Iva Ivic">
     <Clanovi>
-      <Clan _id="2d0602d9-f68b-4856-9653-ce06b1ed7e3c" />
-      <Clan _id="d4c028fc-8e4e-4654-b3b8-538c62272433" />
-      <Clan _id="32b46fe7-cdb4-4d4c-b63b-4c6a6523e120" />
+      <Clan _id="51e0f24e-6fdb-4be2-a5b3-d729239a50e7" />
+      <Clan _id="510adddc-4488-436a-884e-875d145e1527" />
+      <Clan _id="def8bd83-0ef1-4807-928d-1c0a6d22b110" />
     </Clanovi>
     <Aktivnosti>
-      <Aktivnost _id="bd1db2bd-4dfa-4713-a444-d95b6d32f8ee" />
+      <Aktivnost _id="94dfe021-21a9-4075-a40a-a95d77f17e7d" />
     </Aktivnosti>
   </Projekt>
-  <Projekt _id="19121d52-98fb-4bc9-89a4-b692b88761a9" _ime="NavySnail" _obrisan="False">
+  <Projekt _id="e23437ea-467a-4a35-894f-d96857223036" _ime="YellowZinc" _obrisan="False" _idVoditelja="2260c4f2-c1d7-4a9e-8a4b-49be2434e2e4" _nositelj="Tomo Tomic">
     <Clanovi>
-      <Clan _id="a2bf754e-f336-4714-aff9-a2fd9fe3a2bb" />
-      <Clan _id="3234d659-96eb-48a5-bbf9-feccbb1efdc7" />
-      <Clan _id="27767c83-bc14-43ba-86d4-4f7668333878" />
+      <Clan _id="2260c4f2-c1d7-4a9e-8a4b-49be2434e2e4" />
+      <Clan _id="5f383caa-ac83-4d9f-ae4d-b334ac27a77e" />
+      <Clan _id="2d25bf58-9eae-4a4f-a363-717a885d3d95" />
     </Clanovi>
     <Aktivnosti>
-      <Aktivnost _id="d98aed61-7526-465e-9a1e-dc5ca0d6e0b3" />
+      <Aktivnost _id="adb29ef0-f12d-4824-b813-264bdb6c5b4a" />
     </Aktivnosti>
   </Projekt>
 </Projekti>
