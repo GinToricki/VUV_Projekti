@@ -11,18 +11,23 @@ namespace VUV_Projekti
         private Guid _IdProjekta;
         private string _ImeProjekta;
         private List<ClanProjekta> _ClanoviProjekta;
+        private List<Guid> _ListaIdClanova;
         private List<Aktivnost> _ListaAktivnosti;
+        private List<Guid> _ListaIdAktivnosti;
         private bool _Obrisan;
 
-        public Projekt(Guid idProjekta, string imeProjekta, List<ClanProjekta> clanoviProjekta, List<Aktivnost> listaAktivnosti)
+        public Projekt(Guid idProjekta, string imeProjekta, List<ClanProjekta> clanoviProjekta, List<Aktivnost> listaAktivnosti, List<Guid> lIdAktivnosti, List<Guid> ListaIdClanova)
         {
             _IdProjekta = idProjekta;
             _ImeProjekta = imeProjekta;
             _ClanoviProjekta = clanoviProjekta;
             _ListaAktivnosti = listaAktivnosti;
+            _ListaIdAktivnosti = lIdAktivnosti;
+            _ListaIdClanova = ListaIdClanova;
             _Obrisan = false;
         }
 
+        
         public Guid IdProjekta
         {
             get { return _IdProjekta; }
@@ -32,7 +37,15 @@ namespace VUV_Projekti
         {
             get { return _ImeProjekta; }
         }
+        public List<Guid> ListaIdAktivnosti
+        {
+            get { return _ListaIdAktivnosti; }
+        }
 
+        public List<Guid> ListaIdClanova
+        {
+            get { return _ListaIdClanova; }
+        }
         public List<ClanProjekta> ClanoviProjekta
         {
             get { return _ClanoviProjekta; }
@@ -41,6 +54,11 @@ namespace VUV_Projekti
         public List<Aktivnost> ListaAktivnosti
         {
             get { return _ListaAktivnosti; }
+        }
+
+        public bool Obrisan
+        {
+            get { return _Obrisan; }
         }
 
         private bool PotvrdiOib(string oib)

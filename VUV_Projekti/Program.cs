@@ -113,16 +113,16 @@ namespace VUV_Projekti
             Aktivnost a5 = new Aktivnost(Guid.NewGuid(), "Promjeni sučelje", "Promjeni sučelje aplikacije", DateTime.Now, DateTime.Now, l1, new List<ClanProjekta> { c13, c14, c15 });
 
 
-            Projekt p1 = new Projekt(Guid.NewGuid(), "teStniprojekt", new List<ClanProjekta> { c1, c2 }, null);
-            Projekt p2 = new Projekt(Guid.NewGuid(), "NavySnail", new List<ClanProjekta> { c4, c5, c6 }, new List<Aktivnost> { a2 });
-            Projekt p3 = new Projekt(Guid.NewGuid(), "BlackFlea", new List<ClanProjekta> { c7, c8, c9 }, new List<Aktivnost> { a3 });
-            Projekt p4 = new Projekt(Guid.NewGuid(), "NavySnail", new List<ClanProjekta> { c10, c11, c12 }, new List<Aktivnost> { a4 });
-            Projekt p5 = new Projekt(Guid.NewGuid(), "NavySnail", new List<ClanProjekta> { c13, c14, c15 }, new List<Aktivnost> { a5 });
+            Projekt p1 = new Projekt(Guid.NewGuid(), "teStniprojekt", new List<ClanProjekta> { c1, c2 }, new List<Aktivnost> { a1}, new List<Guid> {a1.IdAktivnosti }, new List<Guid> {c1.Id,c2.Id,c3.Id });
+            Projekt p2 = new Projekt(Guid.NewGuid(), "NavySnail", new List<ClanProjekta> { c4, c5, c6 }, new List<Aktivnost> { a2 }, new List<Guid> { a2.IdAktivnosti }, new List<Guid> { c4.Id, c5.Id, c6.Id });
+            Projekt p3 = new Projekt(Guid.NewGuid(), "BlackFlea", new List<ClanProjekta> { c7, c8, c9 }, new List<Aktivnost> { a3 }, new List<Guid> { a3.IdAktivnosti }, new List<Guid> { c7.Id, c8.Id, c9.Id });
+            Projekt p4 = new Projekt(Guid.NewGuid(), "NavySnail", new List<ClanProjekta> { c10, c11, c12 }, new List<Aktivnost> { a4 }, new List<Guid> { a4.IdAktivnosti }, new List<Guid> { c10.Id, c11.Id, c12.Id });
+            Projekt p5 = new Projekt(Guid.NewGuid(), "NavySnail", new List<ClanProjekta> { c13, c14, c15 }, new List<Aktivnost> { a5 }, new List<Guid> { a5.IdAktivnosti }, new List<Guid> { c13.Id, c14.Id, c15.Id });
 
             List<Projekt> lProjekta = new List<Projekt>() { p1, p2, p3, p4, p5 };
 
             string xml = "";
-            using (StreamReader sr = new StreamReader(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\Projekti.xml"))
+            using (StreamReader sr = new StreamReader(@"C:\Users\Korisnik\Source\Repos\GinToricki\VUV_Projekti\VUV_Projekti\Projekti.xml"))
             {
                 xml = sr.ReadToEnd();
             }
@@ -141,32 +141,34 @@ namespace VUV_Projekti
                 imeAttr.Value = p.ImeProjekta;
                 noviNode.Attributes.Append(imeAttr);
                 XmlNode clanoviNode = xmlObject.CreateNode(XmlNodeType.Element, "Clanovi", null);
-                foreach (ClanProjekta cp in p.ClanoviProjekta)
+                foreach (Guid cp in p.ListaIdClanova)
                 {
                     XmlNode noviNode2 = xmlObject.CreateNode(XmlNodeType.Element, "Clan", null);
                     XmlAttribute idAttr2 = xmlObject.CreateAttribute("_id");
-                    idAttr2.Value = cp.Id.ToString();
+                    idAttr2.Value = cp.ToString();
                     noviNode2.Attributes.Append(idAttr2);
-                    XmlAttribute imeAttr2 = xmlObject.CreateAttribute("_ime");
-                    imeAttr2.Value = cp.Ime;
-                    noviNode2.Attributes.Append(imeAttr2);
-                    XmlAttribute prezimeAttr = xmlObject.CreateAttribute("_prezime");
-                    prezimeAttr.Value = cp.Prezime;
-                    noviNode2.Attributes.Append(prezimeAttr);
-                    XmlAttribute OibAttr = xmlObject.CreateAttribute("_oib");
-                    OibAttr.Value = cp.Oib;
-                    noviNode2.Attributes.Append(OibAttr);
-                    XmlAttribute IzbrisanAttr = xmlObject.CreateAttribute("_obrisan");
-                    IzbrisanAttr.Value = cp.Obrisan.ToString();
-                    noviNode2.Attributes.Append(IzbrisanAttr);
 
                     clanoviNode.AppendChild(noviNode2);
                 }
+                XmlNode AktivnostiNode = xmlObject.CreateNode(XmlNodeType.Element, "Aktivnosti", null);
+                foreach(Guid a in p.ListaIdAktivnosti)
+                {
+                    XmlNode aktivnost = xmlObject.CreateNode(XmlNodeType.Element, "Aktivnost", null);
+                    XmlAttribute idAktivnosti = xmlObject.CreateAttribute("_id");
+                    idAktivnosti.Value = a.ToString();
+                    aktivnost.Attributes.Append(idAktivnosti);
+
+                    AktivnostiNode.AppendChild(aktivnost);
+                }
+                XmlAttribute obrisanAttr = xmlObject.CreateAttribute("_obrisan");
+                obrisanAttr.Value = p.Obrisan.ToString();
+                noviNode.Attributes.Append(obrisanAttr);
                 noviNode.AppendChild(clanoviNode);
+                noviNode.AppendChild(AktivnostiNode);
                 projektNode.AppendChild(noviNode);
             }
 
-            xmlObject.Save(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\Projekti.xml");
+            xmlObject.Save(@"C:\Users\Korisnik\Source\Repos\GinToricki\VUV_Projekti\VUV_Projekti\Projekti.xml");
             Console.ReadKey();
         }
     }
@@ -207,5 +209,22 @@ namespace VUV_Projekti
             }
 
             xmlObject.Save(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\ClanoviProjekta.xml");
+
+
+        ostatak clanova
+
+
+                    XmlAttribute imeAttr2 = xmlObject.CreateAttribute("_ime");
+                    imeAttr2.Value = cp.Ime;
+                    noviNode2.Attributes.Append(imeAttr2);
+                    XmlAttribute prezimeAttr = xmlObject.CreateAttribute("_prezime");
+                    prezimeAttr.Value = cp.Prezime;
+                    noviNode2.Attributes.Append(prezimeAttr);
+                    XmlAttribute OibAttr = xmlObject.CreateAttribute("_oib");
+                    OibAttr.Value = cp.Oib;
+                    noviNode2.Attributes.Append(OibAttr);
+                    XmlAttribute IzbrisanAttr = xmlObject.CreateAttribute("_obrisan");
+                    IzbrisanAttr.Value = cp.Obrisan.ToString();
+                    noviNode2.Attributes.Append(IzbrisanAttr);
  
  */
