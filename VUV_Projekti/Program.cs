@@ -117,11 +117,11 @@ namespace VUV_Projekti
             List<Aktivnost> lAktivnosti = new List<Aktivnost>() { a1, a2, a3, a4, a5 }; 
 
 
-            Projekt p1 = new Projekt(Guid.NewGuid(), "teStniprojekt",new List<Guid> {a1.IdAktivnosti }, new List<Guid> {c1.Id,c2.Id,c3.Id }, c1.Id, "Marko Maric");
-            Projekt p2 = new Projekt(Guid.NewGuid(), "NavySnail",new List<Guid> { a2.IdAktivnosti }, new List<Guid> { c4.Id, c5.Id, c6.Id }, c4.Id, "Ana Anic");
-            Projekt p3 = new Projekt(Guid.NewGuid(), "BlackFlea",new List<Guid> { a3.IdAktivnosti }, new List<Guid> { c7.Id, c8.Id, c9.Id }, c7.Id, "Luka Lukic");
-            Projekt p4 = new Projekt(Guid.NewGuid(), "AquaTitanium", new List<Guid> { a4.IdAktivnosti }, new List<Guid> { c10.Id, c11.Id, c12.Id }, c10.Id, "Iva Ivic");
-            Projekt p5 = new Projekt(Guid.NewGuid(), "YellowZinc", new List<Guid> { a5.IdAktivnosti }, new List<Guid> { c13.Id, c14.Id, c15.Id }, c13.Id, "Tomo Tomic");
+            Projekt p1 = new Projekt(Guid.NewGuid(), "teStniprojekt",new List<Guid> {a1.IdAktivnosti }, new List<Guid> {c1.Id,c2.Id,c3.Id }, c1.Id, "Marko Maric", l1.IdLokacije,5);
+            Projekt p2 = new Projekt(Guid.NewGuid(), "NavySnail",new List<Guid> { a2.IdAktivnosti }, new List<Guid> { c4.Id, c5.Id, c6.Id }, c4.Id, "Ana Anic", l2.IdLokacije,6);
+            Projekt p3 = new Projekt(Guid.NewGuid(), "BlackFlea",new List<Guid> { a3.IdAktivnosti }, new List<Guid> { c7.Id, c8.Id, c9.Id }, c7.Id, "Luka Lukic", l2.IdLokacije,7);
+            Projekt p4 = new Projekt(Guid.NewGuid(), "AquaTitanium", new List<Guid> { a4.IdAktivnosti }, new List<Guid> { c10.Id, c11.Id, c12.Id }, c10.Id, "Iva Ivic", l3.IdLokacije,8);
+            Projekt p5 = new Projekt(Guid.NewGuid(), "YellowZinc", new List<Guid> { a5.IdAktivnosti }, new List<Guid> { c13.Id, c14.Id, c15.Id }, c13.Id, "Tomo Tomic", l3.IdLokacije,9);
 
             List<Projekt> lProjekta = new List<Projekt>() { p1, p2, p3, p4, p5 };
 
@@ -134,9 +134,7 @@ namespace VUV_Projekti
             dk1.ZapisiLokacije(listaLokacija);
             dk1.ZapisiAktivnosti(lAktivnosti);
             dk1.ZapisiProjekte(lProjekta);
-            dk1.UcitajAktivnosti();
-            dk1.UcitajProjekte();
-            dk1.UcitajLokacije();
+            dk1.prikaziProjekte();
             Console.ReadKey();
         }
     }

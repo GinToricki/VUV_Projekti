@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Clanovi>
-  <ClanProjekta _id="d50fd48b-7f73-43ab-a651-e50eaa25a2a3" _ime="Tin" _prezime="Tinic" _oib="1234567890" _obrisan="False" _dob="6/19/2024 1:51:17 AM" />
-  <ClanProjekta _id="23f29221-9f44-4ceb-a293-2a3deeb338a1" _ime="Marko" _prezime="Maric" _oib="3106465331" _obrisan="False" _dob="6/19/2024 1:51:17 AM" />
-  <ClanProjekta _id="662337d5-76cc-4e54-bac2-5ef16e5f0d99" _ime="Luka" _prezime="Lukic" _oib="4001141091" _obrisan="False" _dob="6/19/2024 1:51:17 AM" />
-  <ClanProjekta _id="dccaf59f-a77c-4b12-a786-d290e8138b9f" _ime="Iva" _prezime="Ivic" _oib="7329962608" _obrisan="False" _dob="6/19/2024 1:51:17 AM" />
-  <ClanProjekta _id="40efe34c-e4a5-4a0a-b3d1-6c9cfb2fa2a2" _ime="Ana" _prezime="Anic" _oib="3255805385" _obrisan="False" _dob="6/19/2024 1:51:17 AM" />
-  <ClanProjekta _id="ee7ca944-99fb-41d6-90ca-91d04351e106" _ime="Lucija" _prezime="Lucic" _oib="7445589915" _obrisan="False" _dob="6/19/2024 1:51:17 AM" />
-  <ClanProjekta _id="76a34ef2-ad31-4f65-aebd-7ad47ba6b283" _ime="Lara" _prezime="Zeljko" _oib="7107203201" _obrisan="False" _dob="6/19/2024 1:51:17 AM" />
-  <ClanProjekta _id="6fcdb65c-09c8-40bc-9524-48990e7c60ae" _ime="Neven" _prezime="Pavlovic" _oib="1892122323" _obrisan="False" _dob="6/19/2024 1:51:17 AM" />
-  <ClanProjekta _id="977c76bf-c97d-4ab7-afd2-2da9a5c56758" _ime="Ivan" _prezime="Kanjka" _oib="8535913317" _obrisan="False" _dob="6/19/2024 1:51:17 AM" />
-  <ClanProjekta _id="51e0f24e-6fdb-4be2-a5b3-d729239a50e7" _ime="Filip" _prezime="Stanja" _oib="4396431148" _obrisan="False" _dob="6/19/2024 1:51:17 AM" />
-  <ClanProjekta _id="510adddc-4488-436a-884e-875d145e1527" _ime="Micoje" _prezime="Stanja" _oib="8484462278" _obrisan="False" _dob="6/19/2024 1:51:17 AM" />
-  <ClanProjekta _id="def8bd83-0ef1-4807-928d-1c0a6d22b110" _ime="Fran" _prezime="Jurkic" _oib="5767991886" _obrisan="False" _dob="6/19/2024 1:51:17 AM" />
-  <ClanProjekta _id="2260c4f2-c1d7-4a9e-8a4b-49be2434e2e4" _ime="Domagoj" _prezime="Paukovic" _oib="7465203617" _obrisan="False" _dob="6/19/2024 1:51:17 AM" />
-  <ClanProjekta _id="5f383caa-ac83-4d9f-ae4d-b334ac27a77e" _ime="Sebastijan" _prezime="Senic" _oib="9769384345" _obrisan="False" _dob="6/19/2024 1:51:17 AM" />
-  <ClanProjekta _id="2d25bf58-9eae-4a4f-a363-717a885d3d95" _ime="Luka" _prezime="Petras" _oib="3995890681" _obrisan="False" _dob="6/19/2024 1:51:17 AM" />
+  <ClanProjekta _id="7a4629d5-d824-4fb8-95dc-9e17d594c6e9" _ime="Tin" _prezime="Tinic" _oib="1234567890" _obrisan="False" _dob="6/19/2024 2:28:06 AM" />
+  <ClanProjekta _id="e2176032-d4b1-49c8-9fe0-fd346b6f8c67" _ime="Marko" _prezime="Maric" _oib="3106465331" _obrisan="False" _dob="6/19/2024 2:28:06 AM" />
+  <ClanProjekta _id="077014ea-15e1-4a24-9fee-8aa51838f6a2" _ime="Luka" _prezime="Lukic" _oib="4001141091" _obrisan="False" _dob="6/19/2024 2:28:06 AM" />
+  <ClanProjekta _id="4443f11f-cd86-4bcf-a657-444bc3fcd22f" _ime="Iva" _prezime="Ivic" _oib="7329962608" _obrisan="False" _dob="6/19/2024 2:28:06 AM" />
+  <ClanProjekta _id="0934974a-3067-4faf-a647-2aa46b3a509e" _ime="Ana" _prezime="Anic" _oib="3255805385" _obrisan="False" _dob="6/19/2024 2:28:06 AM" />
+  <ClanProjekta _id="655cb13a-8214-4930-be39-146ca905fbb5" _ime="Lucija" _prezime="Lucic" _oib="7445589915" _obrisan="False" _dob="6/19/2024 2:28:06 AM" />
+  <ClanProjekta _id="954fb447-fdd0-43a3-84b9-0057afffa6ad" _ime="Lara" _prezime="Zeljko" _oib="7107203201" _obrisan="False" _dob="6/19/2024 2:28:06 AM" />
+  <ClanProjekta _id="facae029-9942-4a74-aaa5-e883e0ecbce9" _ime="Neven" _prezime="Pavlovic" _oib="1892122323" _obrisan="False" _dob="6/19/2024 2:28:06 AM" />
+  <ClanProjekta _id="6bb520dc-5bc1-48df-8c00-776846eb5a6f" _ime="Ivan" _prezime="Kanjka" _oib="8535913317" _obrisan="False" _dob="6/19/2024 2:28:06 AM" />
+  <ClanProjekta _id="9e3b1787-76f7-41be-be86-3af11b3ccbf5" _ime="Filip" _prezime="Stanja" _oib="4396431148" _obrisan="False" _dob="6/19/2024 2:28:06 AM" />
+  <ClanProjekta _id="daf502a5-503a-42ee-b196-2e8bd0a5dd01" _ime="Micoje" _prezime="Stanja" _oib="8484462278" _obrisan="False" _dob="6/19/2024 2:28:06 AM" />
+  <ClanProjekta _id="0f7cc141-060e-4efe-a593-af842080b8e9" _ime="Fran" _prezime="Jurkic" _oib="5767991886" _obrisan="False" _dob="6/19/2024 2:28:06 AM" />
+  <ClanProjekta _id="a93b1633-2dc6-4c5e-a8f5-fe58780da897" _ime="Domagoj" _prezime="Paukovic" _oib="7465203617" _obrisan="False" _dob="6/19/2024 2:28:06 AM" />
+  <ClanProjekta _id="84c1f93a-5bb9-4561-9266-ee2c705ad121" _ime="Sebastijan" _prezime="Senic" _oib="9769384345" _obrisan="False" _dob="6/19/2024 2:28:06 AM" />
+  <ClanProjekta _id="aef66ecc-4d83-497a-b693-04baf842e540" _ime="Luka" _prezime="Petras" _oib="3995890681" _obrisan="False" _dob="6/19/2024 2:28:06 AM" />
 </Clanovi>

@@ -14,9 +14,11 @@ namespace VUV_Projekti
         private List<Guid> _ListaIdAktivnosti;
         private string _Nositelj;
         private Guid _idVoditelja;
+        private Guid _idLokacije;
         private bool _Obrisan;
+        private int _Vrijednost;
 
-        public Projekt(Guid idProjekta, string imeProjekta,List<Guid> lIdAktivnosti, List<Guid> ListaIdClanova, Guid idVoditelja, string nositelj)
+        public Projekt(Guid idProjekta, string imeProjekta,List<Guid> lIdAktivnosti, List<Guid> ListaIdClanova, Guid idVoditelja, string nositelj, Guid idLokacije, int vrijednost)
         {
             _IdProjekta = idProjekta;
             _ImeProjekta = imeProjekta;
@@ -24,10 +26,20 @@ namespace VUV_Projekti
             _ListaIdClanova = ListaIdClanova;
             _Nositelj = nositelj;
             _idVoditelja = idVoditelja;
+            _idLokacije = idLokacije;
+            _Vrijednost = vrijednost;
             _Obrisan = false;
         }
 
-        
+        public int Vrijednost
+        {
+            get { return _Vrijednost; }
+        }
+
+        public Guid IdLokacije
+        {
+            get { return _idLokacije; }
+        }
         public Guid IdProjekta
         {
             get { return _IdProjekta; }

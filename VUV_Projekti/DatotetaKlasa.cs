@@ -5,12 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Xml;
+using ConsoleTables;
 
 namespace VUV_Projekti
 {
     class DatotetaKlasa
     {
+        private List<ClanProjekta> listaClanovaProjekta;
         private List<Aktivnost> listaAktivnosti;
+        private List<Projekt> listaProjekta;
+        private List<Lokacija> listaLokacija;
         public void UcitajClanove()
         {
             string xml = "";
@@ -36,7 +40,7 @@ namespace VUV_Projekti
                     ));
             }
 
-            
+            listaClanovaProjekta = clanoviProjekta;
         }
 
         public void ZapisiClanove(List<ClanProjekta> clanovi)
@@ -197,26 +201,14 @@ namespace VUV_Projekti
                     listaIdAktivnosti,
                     listaIdClanova,
                     new Guid(p.Attributes["_idVoditelja"].Value),
-                    p.Attributes["_nositelj"].Value
+                    p.Attributes["_nositelj"].Value,
+                    new Guid(p.Attributes["_idLokacije"].Value),
+                    Convert.ToInt32(p.Attributes["_vrijednost"].Value)
                     ));
             }
 
-           foreach(Projekt p in lProjekta)
-            {
-                Console.WriteLine(p.ImeProjekta);
-                foreach(Guid akId in p.ListaIdAktivnosti)
-                {
-                    foreach(Aktivnost ak in listaAktivnosti)
-                    {
-                        if(ak.IdAktivnosti == akId)
-                        {
-                            Console.WriteLine("Ovaj projekt sadrzi ovu aktivnost");
-                            Console.WriteLine(ak.Naziv);
-                            Console.WriteLine(ak.Opis);
-                        }
-                    }
-                }
-            }
+           
+            listaProjekta = lProjekta;
         }
 
         public void ZapisiProjekte(List<Projekt> lProjekta)
@@ -269,6 +261,12 @@ namespace VUV_Projekti
                 XmlAttribute nositelj = xmlObject.CreateAttribute("_nositelj");
                 nositelj.Value = p.Nositelj;
                 noviNode.Attributes.Append(nositelj);
+                XmlAttribute vrijednost = xmlObject.CreateAttribute("_vrijednost");
+                vrijednost.Value = p.Vrijednost.ToString();
+                noviNode.Attributes.Append(vrijednost);
+                XmlAttribute idLokacije = xmlObject.CreateAttribute("_idLokacije");
+                idLokacije.Value = p.IdLokacije.ToString();
+                noviNode.Attributes.Append(idLokacije);
                 noviNode.AppendChild(clanoviNode);
                 noviNode.AppendChild(AktivnostiNode);
                 projektNode.AppendChild(noviNode);
@@ -301,10 +299,7 @@ namespace VUV_Projekti
                     lok.Attributes["_long"].Value
                     )) ;
             }
-            foreach(Lokacija lok in lLokacija)
-            {
-                Console.WriteLine(lok.Adresa);
-            }
+            listaLokacija = lLokacija;
         }
 
         public void ZapisiLokacije(List<Lokacija> lLokacija)
@@ -344,6 +339,34 @@ namespace VUV_Projekti
             }
 
             xmlObject.Save(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\Lokacije.xml");
+        }
+
+        public void prikaziProjekte()
+        {
+            UcitajClanove();
+            UcitajAktivnosti();
+            UcitajLokacije();
+            UcitajProjekte();
+            var Table = new ConsoleTable("R.br", "Naziv", "Nositelj", "Vrijednost", "Status", "Voditelj", "Lokacija");
+            for(int i = 0; i < listaProjekta.Count; i++)
+            {
+                string status = "Aktivan";
+                string lokacija = "";
+                string Voditelj = "";
+                if (listaProjekta[i].Obrisan)
+                {
+                    status = "Neaktivan";
+                }
+                foreach(Lokacija lok in listaLokacija)
+                {
+                    if(lok.IdLokacije == listaProjekta[i].IdLokacije)
+                    {
+                        lokacija = lok.Grad;
+                    }
+                }
+                Table.AddRow(i + 1, listaProjekta[i].ImeProjekta, listaProjekta[i].Nositelj, listaProjekta[i].Vrijednost, status, Voditelj, lokacija);
+            }
+            Table.Write();
         }
     }
 }
