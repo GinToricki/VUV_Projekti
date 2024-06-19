@@ -47,15 +47,27 @@ namespace VUV_Projekti
         }
         static void Izbornik()
         {
-            Console.WriteLine("1. Lista projekata\n2. Dodavanje projekta\n3. Ažuriranje projekta\n4. Dodavanje aktivnost\n5. Lista članova projekta\n6. Dodavanje člana\n7. Brisanje člana\n8. Statistika\n9.izlaz ");
-            Console.WriteLine("Unesite vas odabir");
+            DatotetaKlasa dk1 = new DatotetaKlasa();
+            
             bool pokreni = true;
+            
             while (pokreni)
             {
-                string odabir = Console.ReadLine();
+                Console.WriteLine("1. Lista projekata\n2. Dodavanje projekta\n3. Ažuriranje projekta\n4. Dodavanje aktivnost\n5. Lista članova projekta\n6. Dodavanje člana\n7. Brisanje člana\n8. Statistika\n9.izlaz ");
+                Console.WriteLine("Unesite vas odabir");
+                string odabir ="";
+                try
+                {
+                    odabir = Console.ReadLine();
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
                 switch (odabir)
                 {
                     case "1":
+                        dk1.prikaziProjekte();
                         break;
                     case "2":
                         break;
@@ -122,19 +134,22 @@ namespace VUV_Projekti
             Projekt p3 = new Projekt(Guid.NewGuid(), "BlackFlea",new List<Guid> { a3.IdAktivnosti }, new List<Guid> { c7.Id, c8.Id, c9.Id }, c7.Id, "Luka Lukic", l2.IdLokacije,7);
             Projekt p4 = new Projekt(Guid.NewGuid(), "AquaTitanium", new List<Guid> { a4.IdAktivnosti }, new List<Guid> { c10.Id, c11.Id, c12.Id }, c10.Id, "Iva Ivic", l3.IdLokacije,8);
             Projekt p5 = new Projekt(Guid.NewGuid(), "YellowZinc", new List<Guid> { a5.IdAktivnosti }, new List<Guid> { c13.Id, c14.Id, c15.Id }, c13.Id, "Tomo Tomic", l3.IdLokacije,9);
+            Projekt p6 = new Projekt(Guid.NewGuid(), "BlackTitanium", new List<Guid>(), new List<Guid> { c1.Id }, c1.Id, "Tomo Tomic", l1.IdLokacije, 3, true);
+            Projekt p7 = new Projekt(Guid.NewGuid(), "PurpleCopper", new List<Guid>(), new List<Guid> { c2.Id }, c2.Id, "Marko Maric", l1.IdLokacije, 3, true);
+            Projekt p8 = new Projekt(Guid.NewGuid(), "NavySteel", new List<Guid>(), new List<Guid> { c3.Id }, c3.Id, "Tomo Tomic", l1.IdLokacije, 3, true);
 
-            List<Projekt> lProjekta = new List<Projekt>() { p1, p2, p3, p4, p5 };
+            List<Projekt> lProjekta = new List<Projekt>() { p1, p2, p3, p4, p5,p6,p7,p8 };
 
             DatotetaKlasa dk1 = new DatotetaKlasa();
 
 
 
 
-            dk1.ZapisiClanove(clanovi);
+            /*dk1.ZapisiClanove(clanovi);
             dk1.ZapisiLokacije(listaLokacija);
             dk1.ZapisiAktivnosti(lAktivnosti);
-            dk1.ZapisiProjekte(lProjekta);
-            dk1.prikaziProjekte();
+            dk1.ZapisiProjekte(lProjekta);*/
+            Izbornik();
             Console.ReadKey();
         }
     }

@@ -31,6 +31,19 @@ namespace VUV_Projekti
             _Obrisan = false;
         }
 
+        public Projekt(Guid idProjekta, string imeProjekta, List<Guid> lIdAktivnosti, List<Guid> ListaIdClanova, Guid idVoditelja, string nositelj, Guid idLokacije, int vrijednost, bool status)
+        {
+            _IdProjekta = idProjekta;
+            _ImeProjekta = imeProjekta;
+            _ListaIdAktivnosti = lIdAktivnosti;
+            _ListaIdClanova = ListaIdClanova;
+            _Nositelj = nositelj;
+            _idVoditelja = idVoditelja;
+            _idLokacije = idLokacije;
+            _Vrijednost = vrijednost;
+            _Obrisan = status;
+        }
+
         public int Vrijednost
         {
             get { return _Vrijednost; }
