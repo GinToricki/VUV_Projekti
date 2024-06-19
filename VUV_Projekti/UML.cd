@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="VUV_Projekti.Osoba">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAACAAABAABAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Osoba.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VUV_Projekti.ClanProjekta" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAQAAABAAAAQABAAACACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClanProjekta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VUV_Projekti.DatotetaKlasa" Collapsed="true">
+    <Position X="2.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAmAAAAAQAABAABAAAAAQAGAiAAgAAAAABAAAIAIAAA=</HashCode>
+      <FileName>DatotetaKlasa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VUV_Projekti.Projekt" Collapsed="true">
+    <Position X="4.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAkDIAkEYBAIAAAAACABAAAABAAAABABAAkAAA=</HashCode>
+      <FileName>Projekt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VUV_Projekti.Aktivnost" Collapsed="true">
+    <Position X="6.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAABAAAAAAAEAABCQAQAAGAQAQQBAABABAAAQAgBA=</HashCode>
+      <FileName>Aktivnost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VUV_Projekti.Izbornik" Collapsed="true">
+    <Position X="8.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAARAAQAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Izbornik.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VUV_Projekti.Lokacija" Collapsed="true">
+    <Position X="10.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAgEAACAAAAAAAABAAABAAAggARAAAABAAAAAAAI=</HashCode>
+      <FileName>Lokacija.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

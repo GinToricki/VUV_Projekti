@@ -18,7 +18,11 @@ namespace VUV_Projekti
         private Guid _idLokacije;
         private List<Guid> _lIdClanovaProjekta;
         private bool _obrisan;
+        
+        public Aktivnost()
+        {
 
+        }
         public Aktivnost(Guid idAktivnosti, string naziv, string opis, DateTime VP, DateTime VK, Lokacija lokacija, List<ClanProjekta> clanProj, Guid idLokacije, List<Guid> lIdClanovaProjekta)
         {
             _idAktivnosti = idAktivnosti;

@@ -114,7 +114,7 @@ namespace VUV_Projekti
                 {
                     Console.WriteLine("Ponovo unesite oib");
                 }
-                DateTime dob = DateTime.Now;
+                int dob = Convert.ToInt32(Console.ReadLine());
                 ClanProjekta noviClan = new ClanProjekta(Guid.NewGuid(),ime, prezime, oib, dob);
                 Console.WriteLine("Uspijesno ste dodali clana Projekta");
             }

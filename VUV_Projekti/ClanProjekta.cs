@@ -9,7 +9,7 @@ namespace VUV_Projekti
     class ClanProjekta : Osoba
     {
         private Guid _id;
-        public ClanProjekta(Guid id,string ime, string prezime, string oib, DateTime dob)
+        public ClanProjekta(Guid id,string ime, string prezime, string oib, int dob)
         {
             _id = id;
             _Ime = ime;
@@ -43,7 +43,7 @@ namespace VUV_Projekti
             set { _Obrisan = value; }
         }
 
-        public DateTime Dob
+        public int Dob
         {
             get { return _Dob; }
         }
