@@ -47,7 +47,7 @@ namespace VUV_Projekti
             Aktivnost a4 = new Aktivnost(Guid.NewGuid(), "Business meeting", "Poslovni sastanak s klijentom", DateTime.Now.AddDays(-25), DateTime.Now, l3, new List<ClanProjekta> { c10, c11, c12 }, l3.IdLokacije, new List<Guid> { c10.Id, c11.Id, c12.Id });
             Aktivnost a5 = new Aktivnost(Guid.NewGuid(), "Obojaj Ured", "Obojaj ured iz zute u plavu", DateTime.Now.AddDays(-10), DateTime.Now, l3, new List<ClanProjekta> { c13, c14, c15 }, l3.IdLokacije, new List<Guid> { c13.Id, c14.Id, c15.Id });
 
-            List<Aktivnost> lAktivnosti = new List<Aktivnost>() { a1, a2, a3, a4, a5 }; 
+         
 
 
             Projekt p1 = new Projekt(Guid.NewGuid(), "teStniprojekt",new List<Guid> {a1.IdAktivnosti }, new List<Guid> {c1.Id,c2.Id,c3.Id }, c1.Id, "Marko Maric", l1.IdLokacije,5);
@@ -58,6 +58,14 @@ namespace VUV_Projekti
             Projekt p6 = new Projekt(Guid.NewGuid(), "BlackTitanium", new List<Guid>(), new List<Guid> { c1.Id }, c1.Id, "Tomo Tomic", l1.IdLokacije, 3, true);
             Projekt p7 = new Projekt(Guid.NewGuid(), "PurpleCopper", new List<Guid>(), new List<Guid> { c2.Id }, c2.Id, "Marko Maric", l1.IdLokacije, 3, true);
             Projekt p8 = new Projekt(Guid.NewGuid(), "NavySteel", new List<Guid>(), new List<Guid> { c3.Id }, c3.Id, "Tomo Tomic", l1.IdLokacije, 3, true);
+
+            a1.IdProjekta = p1.IdProjekta;
+            a2.IdProjekta = p2.IdProjekta;
+            a3.IdProjekta = p3.IdProjekta;
+            a4.IdProjekta = p4.IdProjekta;
+            a5.IdProjekta = p5.IdProjekta;
+
+            List<Aktivnost> lAktivnosti = new List<Aktivnost>() { a1, a2, a3, a4, a5 };
 
             List<Projekt> lProjekta = new List<Projekt>() { p1, p2, p3, p4, p5,p6,p7,p8 };
 

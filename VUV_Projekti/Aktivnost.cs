@@ -17,6 +17,7 @@ namespace VUV_Projekti
         private List<ClanProjekta> _ClanProjekta;
         private Guid _idLokacije;
         private List<Guid> _lIdClanovaProjekta;
+        private Guid _idProjekta;
         private bool _obrisan;
         
         public Aktivnost()
@@ -36,8 +37,7 @@ namespace VUV_Projekti
             _lIdClanovaProjekta = lIdClanovaProjekta;
             _obrisan = false;
         }
-
-        public Aktivnost(Guid idAktivnosti, string naziv, string opis, DateTime VP, DateTime VK, Lokacija lokacija, List<ClanProjekta> clanProj, Guid idLokacije, List<Guid> lIdClanovaProjekta, bool status)
+        public Aktivnost(Guid idAktivnosti, string naziv, string opis, DateTime VP, DateTime VK, Lokacija lokacija, List<ClanProjekta> clanProj, Guid idLokacije, List<Guid> lIdClanovaProjekta, Guid idProj)
         {
             _idAktivnosti = idAktivnosti;
             _Naziv = naziv;
@@ -48,6 +48,22 @@ namespace VUV_Projekti
             _ClanProjekta = clanProj;
             _idLokacije = idLokacije;
             _lIdClanovaProjekta = lIdClanovaProjekta;
+            _idProjekta = idProj;
+            _obrisan = false;
+        }
+
+        public Aktivnost(Guid idAktivnosti, string naziv, string opis, DateTime VP, DateTime VK, Lokacija lokacija, List<ClanProjekta> clanProj, Guid idLokacije, List<Guid> lIdClanovaProjekta, Guid idProj, bool status)
+        {
+            _idAktivnosti = idAktivnosti;
+            _Naziv = naziv;
+            _Opis = opis;
+            _VrijemePocetka = VP;
+            _VrijemeKraja = VK;
+            _Lokacija = lokacija;
+            _ClanProjekta = clanProj;
+            _idLokacije = idLokacije;
+            _lIdClanovaProjekta = lIdClanovaProjekta;
+            _idProjekta = idProj;
             _obrisan = status;
         }
 
@@ -94,6 +110,12 @@ namespace VUV_Projekti
         public List<Guid> LIdClanovaProjekta
         {
             get { return _lIdClanovaProjekta; }
+        }
+
+        public Guid IdProjekta
+        {
+            get { return _idProjekta; }
+            set { _idProjekta = value; }
         }
     }
 }

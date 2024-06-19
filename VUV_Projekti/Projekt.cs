@@ -85,6 +85,7 @@ namespace VUV_Projekti
         public bool Obrisan
         {
             get { return _Obrisan; }
+            set { _Obrisan = value; }
         }
 
         private bool PotvrdiOib(string oib)

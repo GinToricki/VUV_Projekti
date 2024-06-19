@@ -113,7 +113,8 @@ namespace VUV_Projekti
                     null,
                     null,
                     new Guid(ak.Attributes["_idLokacije"].Value),
-                    listaId));
+                    listaId,
+                    new Guid(ak.Attributes["_idProj"].Value)));
             }
 
             listaAktivnosti = lAktivnosti;
@@ -165,6 +166,9 @@ namespace VUV_Projekti
 
                     clanoviNode.AppendChild(noviNode2);
                 }
+                XmlAttribute idProj = xmlObject.CreateAttribute("_idProj");
+                idProj.Value = ak.IdProjekta.ToString() ;
+                noviNode.Attributes.Append(idProj);
                 noviNode.AppendChild(clanoviNode);
                 projektNode.AppendChild(noviNode);
             }
