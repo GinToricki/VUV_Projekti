@@ -58,6 +58,7 @@ namespace VUV_Projekti
             Projekt p6 = new Projekt(Guid.NewGuid(), "BlackTitanium", new List<Guid>(), new List<Guid> { c1.Id }, c1.Id, "Tomo Tomic", l1.IdLokacije, 3, true);
             Projekt p7 = new Projekt(Guid.NewGuid(), "PurpleCopper", new List<Guid>(), new List<Guid> { c2.Id }, c2.Id, "Marko Maric", l1.IdLokacije, 3, true);
             Projekt p8 = new Projekt(Guid.NewGuid(), "NavySteel", new List<Guid>(), new List<Guid> { c3.Id }, c3.Id, "Tomo Tomic", l1.IdLokacije, 3, true);
+           
 
             a1.IdProjekta = p1.IdProjekta;
             a2.IdProjekta = p2.IdProjekta;

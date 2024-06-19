@@ -68,4 +68,14 @@
     </Clanovi>
     <Aktivnosti />
   </Projekt>
+  <Projekt _id="dbea8086-d78e-4748-933c-a2d3d52c2d97" _ime="UpisaniProjekt" _obrisan="False" _idVoditelja="bd804d6e-9c61-44f3-97f7-bc1b00dfe028" _nositelj="Ana Anic" _vrijednost="9" _idLokacije="1d3c21df-900d-4210-9c27-a4b3cf2c5b9a">
+    <Clanovi>
+      <Clan _id="bd804d6e-9c61-44f3-97f7-bc1b00dfe028" />
+      <Clan _id="8f72365f-384e-4e6c-b2e3-d3a0ee5d9e9f" />
+      <Clan _id="9d47ef9f-6773-42b5-a5f0-db4406b3adf5" />
+    </Clanovi>
+    <Aktivnosti>
+      <Aktivnost _id="a7360125-6c02-4f61-9289-95fc0dbfadb7" />
+    </Aktivnosti>
+  </Projekt>
 </Projekti>

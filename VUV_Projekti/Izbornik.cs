@@ -39,9 +39,10 @@ namespace VUV_Projekti
                         prikaziProjekte(dk1);
                         break;
                     case "2":
-
+                        DodavanjeProjekta(dk1, projekti, clanoviProjekta, aktivnosti, lokacije); //TODO
                         break;
                     case "3":
+                        AzuriranjeProjekata() //TODO
                         break;
                     case "4":
                         DodavanjeAktivnosti(clanoviProjekta, projekti, aktivnosti, lokacije, dk1);
@@ -481,7 +482,42 @@ namespace VUV_Projekti
             }
             return new Aktivnost();
         }
-        public void DodavanjeProjekta( DatotetaKlasa dk, List<Projekt> ulaznaListaProjekata, List<ClanProjekta> ulaznaListaClanova, List<Aktivnost> ulaznaListaAktivnosti, List<Lokacija> ulaznaListaLokacija)
+
+        public string OdabirNositelja ()
+        {
+            string nositelj = "";
+            try
+            {
+                Console.WriteLine("Unesite odabir nositelja");
+                string odabir = Console.ReadLine();
+                switch (odabir)
+                {
+                    case "1":
+                        nositelj = "Marko Maric";
+                        break;
+                    case "2":
+                        nositelj = "Ana Anic";
+                        break;
+                    case "3":
+                        nositelj = "Luka Lukic";
+                        break;
+                    case "4":
+                        nositelj = "Iva Ivic";
+                        break;
+                    case "5":
+                        nositelj = "Tomo Tomic";
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return nositelj;
+        }
+        private void DodavanjeProjekta( DatotetaKlasa dk, List<Projekt> ulaznaListaProjekata, List<ClanProjekta> ulaznaListaClanova, List<Aktivnost> ulaznaListaAktivnosti, List<Lokacija> ulaznaListaLokacija)
         {
             List<ClanProjekta> listaClanovaProjekta = dk.UcitajClanove();
             Console.WriteLine("Unesite ime projekta");
@@ -491,11 +527,24 @@ namespace VUV_Projekti
                 List<Guid> listaAktivnosti = new List<Guid>();
                 List<Guid> listaClanova = BiranjeClanova(ulaznaListaClanova);
                 Lokacija lokacijaProjekta = BiranjeLokacije(ulaznaListaLokacija);
+                Aktivnost a = DodavanjeAktivnosti(ulaznaListaClanova, ulaznaListaProjekata, ulaznaListaAktivnosti, ulaznaListaLokacija, dk);
+                listaAktivnosti.Add(a.IdAktivnosti);
+                //dodati odaberi voditelja
+                Console.WriteLine("Unesite vrijednost projekta");
+                int vrijednostProjekta = Convert.ToInt32(Console.ReadLine());
+                Projekt projekt = new Projekt(Guid.NewGuid(), imeProjekta, listaAktivnosti, listaClanova, listaClanova[0], OdabirNositelja(), lokacijaProjekta.IdLokacije,vrijednostProjekta);
+                ulaznaListaProjekata.Add(projekt);
+                dk.ZapisiProjekte(ulaznaListaProjekata);
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
+        }
+
+        private void AzuriranjeProjekata()
+        {
+
         }
     }
 }
