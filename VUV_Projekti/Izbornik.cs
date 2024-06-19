@@ -481,32 +481,16 @@ namespace VUV_Projekti
             }
             return new Aktivnost();
         }
-        public void DodavanjeProjekta(DatotetaKlasa dk)
+        public void DodavanjeProjekta( DatotetaKlasa dk, List<Projekt> ulaznaListaProjekata, List<ClanProjekta> ulaznaListaClanova, List<Aktivnost> ulaznaListaAktivnosti, List<Lokacija> ulaznaListaLokacija)
         {
             List<ClanProjekta> listaClanovaProjekta = dk.UcitajClanove();
             Console.WriteLine("Unesite ime projekta");
             try
             {
                 string imeProjekta = Console.ReadLine();
-                List<Guid> listaClanova = new List<Guid>();
                 List<Guid> listaAktivnosti = new List<Guid>();
-                while (true)
-                {
-                    Console.WriteLine("Odaberite clanove za projekt. Unesite 0 za povratak");
-                    for (int i = 0; i < listaClanovaProjekta.Count; i++)
-                    {
-                        Console.WriteLine($"{i + 1}. {listaClanovaProjekta[i].Ime} {listaClanovaProjekta[i].Prezime} ({listaClanovaProjekta[i].Oib})");
-                    }
-                    int odabir = Convert.ToInt32(Console.ReadLine());
-                    if (odabir == 0)
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        listaClanova.Add(listaClanovaProjekta[odabir + 1].Id);
-                    }
-                }
+                List<Guid> listaClanova = BiranjeClanova(ulaznaListaClanova);
+                Lokacija lokacijaProjekta = BiranjeLokacije(ulaznaListaLokacija);
             }
             catch (Exception e)
             {
