@@ -42,7 +42,7 @@ namespace VUV_Projekti
                         DodavanjeProjekta(dk1, projekti, clanoviProjekta, aktivnosti, lokacije); //TODO
                         break;
                     case "3":
-                        AzuriranjeProjekata() //TODO
+                        AzuriranjeProjekata(); //TODO
                         break;
                     case "4":
                         DodavanjeAktivnosti(clanoviProjekta, projekti, aktivnosti, lokacije, dk1);
