@@ -78,4 +78,37 @@
       <Aktivnost _id="a7360125-6c02-4f61-9289-95fc0dbfadb7" />
     </Aktivnosti>
   </Projekt>
+  <Projekt _id="c6fca127-920e-4530-852d-77d59157ecc2" _ime="dadsa" _obrisan="False" _idVoditelja="bd804d6e-9c61-44f3-97f7-bc1b00dfe028" _nositelj="Marko Maric" _vrijednost="8321321" _idLokacije="1d3c21df-900d-4210-9c27-a4b3cf2c5b9a">
+    <Clanovi>
+      <Clan _id="bd804d6e-9c61-44f3-97f7-bc1b00dfe028" />
+      <Clan _id="8f72365f-384e-4e6c-b2e3-d3a0ee5d9e9f" />
+      <Clan _id="b566cc60-4f82-408b-99ac-e65e7cf833ee" />
+    </Clanovi>
+    <Aktivnosti>
+      <Aktivnost _id="4c003848-67e5-4d33-b27c-7c256e07e732" />
+    </Aktivnosti>
+  </Projekt>
+  <Projekt _id="8a060696-8066-4bc5-a75a-1528e6cf3401" _ime="projektnizadatzak" _obrisan="False" _idVoditelja="bd804d6e-9c61-44f3-97f7-bc1b00dfe028" _nositelj="Ana Anic" _vrijednost="1" _idLokacije="1d3c21df-900d-4210-9c27-a4b3cf2c5b9a">
+    <Clanovi>
+      <Clan _id="bd804d6e-9c61-44f3-97f7-bc1b00dfe028" />
+      <Clan _id="8f72365f-384e-4e6c-b2e3-d3a0ee5d9e9f" />
+      <Clan _id="b566cc60-4f82-408b-99ac-e65e7cf833ee" />
+      <Clan _id="2a95143f-1589-4796-98f1-87b189b26c6f" />
+      <Clan _id="9d47ef9f-6773-42b5-a5f0-db4406b3adf5" />
+      <Clan _id="648023ca-5dad-4589-93fe-f3774058e902" />
+    </Clanovi>
+    <Aktivnosti>
+      <Aktivnost _id="00000000-0000-0000-0000-000000000000" />
+    </Aktivnosti>
+  </Projekt>
+  <Projekt _id="2a3f8777-2dd2-4ce3-869f-724da5623b0d" _ime="testniprojekt2" _obrisan="False" _idVoditelja="bd804d6e-9c61-44f3-97f7-bc1b00dfe028" _nositelj="Ana Anic" _vrijednost="90000" _idLokacije="1d3c21df-900d-4210-9c27-a4b3cf2c5b9a">
+    <Clanovi>
+      <Clan _id="bd804d6e-9c61-44f3-97f7-bc1b00dfe028" />
+      <Clan _id="8f72365f-384e-4e6c-b2e3-d3a0ee5d9e9f" />
+      <Clan _id="b566cc60-4f82-408b-99ac-e65e7cf833ee" />
+    </Clanovi>
+    <Aktivnosti>
+      <Aktivnost _id="00000000-0000-0000-0000-000000000000" />
+    </Aktivnosti>
+  </Projekt>
 </Projekti>

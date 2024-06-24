@@ -101,6 +101,32 @@ namespace VUV_Projekti
             }
         }
 
+        public void PromjenaVoditelja(List<ClanProjekta> ulaznaListaClanova)
+        {
+            List<ClanProjekta> lClanovaBezVoditelja = new List<ClanProjekta>();
+            foreach(ClanProjekta cp in ulaznaListaClanova)
+            {
+                if (_ListaIdClanova.Contains(cp.Id) && cp.Id != _idVoditelja)
+                {
+                    lClanovaBezVoditelja.Add(cp);
+                }
+            }
+            for(int i = 0; i < lClanovaBezVoditelja.Count; i++)
+            {
+                Console.WriteLine($"{i+1}. {lClanovaBezVoditelja[i].Ime} {lClanovaBezVoditelja[i].Prezime} ({lClanovaBezVoditelja[i].Oib})");
+            }
+            Console.WriteLine("Unesite odabir novog voditelja");
+           try
+           {
+                int odabirNovogVoditelja = Convert.ToInt32(Console.ReadLine()) - 1;
+                _idVoditelja = lClanovaBezVoditelja[odabirNovogVoditelja].Id;
+           }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
         public void DodavanjeClana()
         {
             try
