@@ -36,7 +36,8 @@ namespace VUV_Projekti
                     clanProjekta.Attributes["_ime"].Value,
                     clanProjekta.Attributes["_prezime"].Value,
                     clanProjekta.Attributes["_oib"].Value,
-                    Convert.ToInt32(clanProjekta.Attributes["_dob"].Value)
+                    Convert.ToInt32(clanProjekta.Attributes["_dob"].Value),
+                    Convert.ToBoolean(clanProjekta.Attributes["_obrisan"].Value)
                     ));
             }
 
@@ -209,7 +210,7 @@ namespace VUV_Projekti
                     new Guid(p.Attributes["_idVoditelja"].Value),
                     p.Attributes["_nositelj"].Value,
                     new Guid(p.Attributes["_idLokacije"].Value),
-                    Convert.ToInt32(p.Attributes["_vrijednost"].Value),
+                    Convert.ToDouble(p.Attributes["_vrijednost"].Value),
                     bool.Parse(p.Attributes["_obrisan"].Value)
                     ));
             }

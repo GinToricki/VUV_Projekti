@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Clanovi>
-  <ClanProjekta _id="bd804d6e-9c61-44f3-97f7-bc1b00dfe028" _ime="Tin" _prezime="Tinic" _oib="1234567890" _obrisan="False" _dob="23" />
-  <ClanProjekta _id="8f72365f-384e-4e6c-b2e3-d3a0ee5d9e9f" _ime="Marko" _prezime="Maric" _oib="3106465331" _obrisan="False" _dob="25" />
-  <ClanProjekta _id="b566cc60-4f82-408b-99ac-e65e7cf833ee" _ime="Luka" _prezime="Lukic" _oib="4001141091" _obrisan="False" _dob="26" />
-  <ClanProjekta _id="2a95143f-1589-4796-98f1-87b189b26c6f" _ime="Iva" _prezime="Ivic" _oib="7329962608" _obrisan="False" _dob="21" />
-  <ClanProjekta _id="9d47ef9f-6773-42b5-a5f0-db4406b3adf5" _ime="Ana" _prezime="Anic" _oib="3255805385" _obrisan="False" _dob="23" />
-  <ClanProjekta _id="648023ca-5dad-4589-93fe-f3774058e902" _ime="Lucija" _prezime="Lucic" _oib="7445589915" _obrisan="False" _dob="22" />
-  <ClanProjekta _id="54a9a494-3db7-4b11-aa5a-7a825a88960b" _ime="Lara" _prezime="Zeljko" _oib="7107203201" _obrisan="False" _dob="19" />
-  <ClanProjekta _id="b8fce558-d501-4fc3-8be9-48b33a9669f0" _ime="Neven" _prezime="Pavlovic" _oib="1892122323" _obrisan="False" _dob="19" />
-  <ClanProjekta _id="bb76bad7-807d-45cb-906d-8ad950801268" _ime="Ivan" _prezime="Kanjka" _oib="8535913317" _obrisan="False" _dob="20" />
-  <ClanProjekta _id="fc427a7c-5de2-42c3-9be6-4e0f45fc0f40" _ime="Filip" _prezime="Stanja" _oib="4396431148" _obrisan="False" _dob="20" />
-  <ClanProjekta _id="7baa8d32-0227-4be8-a5b1-d55e2a74bc22" _ime="Micoje" _prezime="Stanja" _oib="8484462278" _obrisan="False" _dob="20" />
-  <ClanProjekta _id="1853f654-4925-4eda-bfaa-4b315a2eb60e" _ime="Fran" _prezime="Jurkic" _oib="5767991886" _obrisan="False" _dob="20" />
-  <ClanProjekta _id="e0474473-6cf3-4b9f-ab15-2f90a1bfefdd" _ime="Domagoj" _prezime="Paukovic" _oib="7465203617" _obrisan="False" _dob="20" />
-  <ClanProjekta _id="f64cb2ab-91d2-47a9-8781-39e4ab4f1f73" _ime="Sebastijan" _prezime="Senic" _oib="9769384345" _obrisan="False" _dob="20" />
-  <ClanProjekta _id="ffe6f7e2-0d52-47a8-9d38-d1e1b411dca0" _ime="Luka" _prezime="Petras" _oib="3995890681" _obrisan="False" _dob="20" />
+  <ClanProjekta _id="4fd63521-14c8-4008-b418-9262a82ebcb6" _ime="Tin" _prezime="Tinic" _oib="1234567890" _obrisan="True" _dob="23" />
+  <ClanProjekta _id="cec11a44-f551-4818-8ead-adda2dc2273b" _ime="Marko" _prezime="Maric" _oib="3106465331" _obrisan="False" _dob="25" />
+  <ClanProjekta _id="8e10f330-47e3-4b17-969d-04cb75ed0e80" _ime="Luka" _prezime="Lukic" _oib="4001141091" _obrisan="False" _dob="26" />
+  <ClanProjekta _id="ebd33b6b-7067-4017-9609-6e01d4f4d4ee" _ime="Iva" _prezime="Ivic" _oib="7329962608" _obrisan="False" _dob="21" />
+  <ClanProjekta _id="03894fe4-1b2a-41bd-8c56-977c849daa5b" _ime="Ana" _prezime="Anic" _oib="3255805385" _obrisan="False" _dob="23" />
+  <ClanProjekta _id="f1b03c07-d655-40c8-b2ae-7e6c10486022" _ime="Lucija" _prezime="Lucic" _oib="7445589915" _obrisan="False" _dob="22" />
+  <ClanProjekta _id="9fe4b822-a45a-4a19-9315-6a5d0c1625e6" _ime="Lara" _prezime="Zeljko" _oib="7107203201" _obrisan="False" _dob="19" />
+  <ClanProjekta _id="b4fbbe46-b973-44eb-8190-b42ebc4a9303" _ime="Neven" _prezime="Pavlovic" _oib="1892122323" _obrisan="False" _dob="19" />
+  <ClanProjekta _id="4a6fe4de-9807-492e-adbc-956a74b6e42d" _ime="Ivan" _prezime="Kanjka" _oib="8535913317" _obrisan="False" _dob="20" />
+  <ClanProjekta _id="d11cf908-d99e-4e36-a050-45ea5d40d8a0" _ime="Filip" _prezime="Stanja" _oib="4396431148" _obrisan="False" _dob="20" />
+  <ClanProjekta _id="8e091d53-c3fa-4fc5-9e48-1466d67c11da" _ime="Micoje" _prezime="Stanja" _oib="8484462278" _obrisan="False" _dob="20" />
+  <ClanProjekta _id="824fd573-9369-40d8-bc60-a350286780e5" _ime="Fran" _prezime="Jurkic" _oib="5767991886" _obrisan="False" _dob="20" />
+  <ClanProjekta _id="25edf984-4b9d-4086-b1df-7d675465aff8" _ime="Domagoj" _prezime="Paukovic" _oib="7465203617" _obrisan="False" _dob="20" />
+  <ClanProjekta _id="367e1d7a-a3e5-4574-b900-ddbb14ee9d98" _ime="Sebastijan" _prezime="Senic" _oib="9769384345" _obrisan="False" _dob="20" />
+  <ClanProjekta _id="a6f1aa5d-31da-42a6-ad1c-d8558ae79fc2" _ime="Luka" _prezime="Petras" _oib="3995890681" _obrisan="False" _dob="20" />
 </Clanovi>

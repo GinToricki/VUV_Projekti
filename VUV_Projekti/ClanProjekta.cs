@@ -18,6 +18,16 @@ namespace VUV_Projekti
             _Dob = dob;
             _Obrisan = false;
         }
+
+        public ClanProjekta(Guid id, string ime, string prezime, string oib, int dob, bool obrisan)
+        {
+            _id = id;
+            _Ime = ime;
+            _Prezime = prezime;
+            _Oib = oib;
+            _Dob = dob;
+            _Obrisan = obrisan;
+        }
         public Guid Id
         {
             get { return _id; }

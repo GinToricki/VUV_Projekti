@@ -1,74 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Aktivnosti>
-  <Aktivnost _id="72328b81-1b38-4b44-a67f-0db2299ecf60" _naziv="Promjeni sučelje" _opis="Promjeni sučelje aplikacije" _vp="4/20/2024 3:57:40 PM" _vk="6/19/2024 3:57:40 PM" _idLokacije="1d3c21df-900d-4210-9c27-a4b3cf2c5b9a" _idProj="9df8ba32-a407-41ae-9b8e-666712cb25bc">
+  <Aktivnost _id="8eddb8a7-2ac7-41b8-bb2a-e1bd344e875e" _naziv="Promjeni sučelje" _opis="Promjeni sučelje aplikacije" _vp="4/26/2024 1:24:31 PM" _vk="6/25/2024 1:24:31 PM" _idLokacije="6cd9b250-8d95-4fa3-b97a-428172d7d4c7" _idProj="b6228fd7-cfe9-4607-be37-80f256c1f73d">
     <Clanovi>
-      <Clan _id="bd804d6e-9c61-44f3-97f7-bc1b00dfe028" />
-      <Clan _id="8f72365f-384e-4e6c-b2e3-d3a0ee5d9e9f" />
-      <Clan _id="b566cc60-4f82-408b-99ac-e65e7cf833ee" />
+      <Clan _id="4fd63521-14c8-4008-b418-9262a82ebcb6" />
+      <Clan _id="cec11a44-f551-4818-8ead-adda2dc2273b" />
+      <Clan _id="8e10f330-47e3-4b17-969d-04cb75ed0e80" />
     </Clanovi>
   </Aktivnost>
-  <Aktivnost _id="0552d971-4a8f-4cb4-adf0-1e447cf19ca5" _naziv="Update Logo" _opis="Promjeni stari logo u novi poboljsani logo" _vp="5/20/2024 3:57:40 PM" _vk="6/19/2024 3:57:40 PM" _idLokacije="55ec0651-e5ef-4ac3-a968-c7a524218ba8" _idProj="b805fc3f-f726-4aa0-8669-2621dff6ed9d">
+  <Aktivnost _id="4ce49c4e-c3d6-45ae-9fe5-042bab09b54c" _naziv="Update Logo" _opis="Promjeni stari logo u novi poboljsani logo" _vp="5/26/2024 1:24:31 PM" _vk="6/25/2024 1:24:31 PM" _idLokacije="66f1dd53-d562-430f-b037-6c5747d82f59" _idProj="cb579f8d-2e89-43d4-ba03-8cab981c2ed1">
     <Clanovi>
-      <Clan _id="2a95143f-1589-4796-98f1-87b189b26c6f" />
-      <Clan _id="9d47ef9f-6773-42b5-a5f0-db4406b3adf5" />
-      <Clan _id="648023ca-5dad-4589-93fe-f3774058e902" />
+      <Clan _id="ebd33b6b-7067-4017-9609-6e01d4f4d4ee" />
+      <Clan _id="03894fe4-1b2a-41bd-8c56-977c849daa5b" />
+      <Clan _id="f1b03c07-d655-40c8-b2ae-7e6c10486022" />
     </Clanovi>
   </Aktivnost>
-  <Aktivnost _id="c5356f16-a374-4234-a33f-55d757ba6d46" _naziv="Kupi materijal" _opis="Kupi novi materijal" _vp="5/30/2024 3:57:40 PM" _vk="6/19/2024 3:57:40 PM" _idLokacije="55ec0651-e5ef-4ac3-a968-c7a524218ba8" _idProj="927e6d9d-fe59-4baa-9a71-bc4c9f0b7332">
+  <Aktivnost _id="610aac4a-bd9b-4a9c-9f1d-24a769f9139e" _naziv="Kupi materijal" _opis="Kupi novi materijal" _vp="6/5/2024 1:24:31 PM" _vk="6/25/2024 1:24:31 PM" _idLokacije="66f1dd53-d562-430f-b037-6c5747d82f59" _idProj="5557b11e-2ae9-4476-9f77-cf0a15974b3a">
     <Clanovi>
-      <Clan _id="54a9a494-3db7-4b11-aa5a-7a825a88960b" />
-      <Clan _id="b8fce558-d501-4fc3-8be9-48b33a9669f0" />
-      <Clan _id="bb76bad7-807d-45cb-906d-8ad950801268" />
+      <Clan _id="9fe4b822-a45a-4a19-9315-6a5d0c1625e6" />
+      <Clan _id="b4fbbe46-b973-44eb-8190-b42ebc4a9303" />
+      <Clan _id="4a6fe4de-9807-492e-adbc-956a74b6e42d" />
     </Clanovi>
   </Aktivnost>
-  <Aktivnost _id="119f98ab-b455-4a79-8241-2f9caffcda9b" _naziv="Business meeting" _opis="Poslovni sastanak s klijentom" _vp="5/25/2024 3:57:40 PM" _vk="6/19/2024 3:57:40 PM" _idLokacije="7129b142-0707-484d-976c-4c5a7726f216" _idProj="adb72463-0e66-482b-9ab8-c1419a7ceee0">
+  <Aktivnost _id="0f7f0a0b-ddd9-4171-bf32-c519a3cbcc51" _naziv="Business meeting" _opis="Poslovni sastanak s klijentom" _vp="5/31/2024 1:24:31 PM" _vk="6/25/2024 1:24:31 PM" _idLokacije="1568953b-3c24-4ae7-b264-c340bff9c5a1" _idProj="c0e3240a-654a-4f1e-9793-f04f072a6bbb">
     <Clanovi>
-      <Clan _id="fc427a7c-5de2-42c3-9be6-4e0f45fc0f40" />
-      <Clan _id="7baa8d32-0227-4be8-a5b1-d55e2a74bc22" />
-      <Clan _id="1853f654-4925-4eda-bfaa-4b315a2eb60e" />
+      <Clan _id="d11cf908-d99e-4e36-a050-45ea5d40d8a0" />
+      <Clan _id="8e091d53-c3fa-4fc5-9e48-1466d67c11da" />
+      <Clan _id="824fd573-9369-40d8-bc60-a350286780e5" />
     </Clanovi>
   </Aktivnost>
-  <Aktivnost _id="60393e7b-c02c-40f2-a365-baffa9d65e5d" _naziv="Obojaj Ured" _opis="Obojaj ured iz zute u plavu" _vp="6/9/2024 3:57:40 PM" _vk="6/19/2024 3:57:40 PM" _idLokacije="7129b142-0707-484d-976c-4c5a7726f216" _idProj="bd790aa2-4a71-4020-867d-eefc74dc469e">
+  <Aktivnost _id="d04ad6fc-645d-41a0-beb5-e9f98ecf88d4" _naziv="Obojaj Ured" _opis="Obojaj ured iz zute u plavu" _vp="6/15/2024 1:24:31 PM" _vk="6/25/2024 1:24:31 PM" _idLokacije="1568953b-3c24-4ae7-b264-c340bff9c5a1" _idProj="402d11ae-38d1-4147-ac5d-732ef07106c0">
     <Clanovi>
-      <Clan _id="e0474473-6cf3-4b9f-ab15-2f90a1bfefdd" />
-      <Clan _id="f64cb2ab-91d2-47a9-8781-39e4ab4f1f73" />
-      <Clan _id="ffe6f7e2-0d52-47a8-9d38-d1e1b411dca0" />
-    </Clanovi>
-  </Aktivnost>
-  <Aktivnost _id="00000000-0000-0000-0000-000000000000" _naziv="kupnmja stolica" _opis="kupiti stolice" _vp="6/19/2024 4:19:38 PM" _vk="6/19/2024 4:19:38 PM" _idLokacije="1d3c21df-900d-4210-9c27-a4b3cf2c5b9a" _idProj="00000000-0000-0000-0000-000000000000">
-    <Clanovi>
-      <Clan _id="bd804d6e-9c61-44f3-97f7-bc1b00dfe028" />
-      <Clan _id="8f72365f-384e-4e6c-b2e3-d3a0ee5d9e9f" />
-    </Clanovi>
-  </Aktivnost>
-  <Aktivnost _id="a25ccf1a-ef51-4ad3-9193-aeaef3c1ac46" _naziv="kupnja stola" _opis="kupnja novog stola" _vp="6/19/2024 4:22:31 PM" _vk="6/19/2024 4:22:31 PM" _idLokacije="1d3c21df-900d-4210-9c27-a4b3cf2c5b9a" _idProj="9df8ba32-a407-41ae-9b8e-666712cb25bc">
-    <Clanovi>
-      <Clan _id="ffe6f7e2-0d52-47a8-9d38-d1e1b411dca0" />
-      <Clan _id="bd804d6e-9c61-44f3-97f7-bc1b00dfe028" />
-      <Clan _id="8f72365f-384e-4e6c-b2e3-d3a0ee5d9e9f" />
-    </Clanovi>
-  </Aktivnost>
-  <Aktivnost _id="cf2fbc32-8f57-423e-b09c-fda515d8ed49" _naziv="prodati novi stol" _opis="prodati novi gaming stol" _vp="6/19/2024 4:26:31 PM" _vk="6/19/2024 4:26:31 PM" _idLokacije="1d3c21df-900d-4210-9c27-a4b3cf2c5b9a" _idProj="9df8ba32-a407-41ae-9b8e-666712cb25bc">
-    <Clanovi>
-      <Clan _id="bd804d6e-9c61-44f3-97f7-bc1b00dfe028" />
-      <Clan _id="8f72365f-384e-4e6c-b2e3-d3a0ee5d9e9f" />
-      <Clan _id="ffe6f7e2-0d52-47a8-9d38-d1e1b411dca0" />
-      <Clan _id="f64cb2ab-91d2-47a9-8781-39e4ab4f1f73" />
-      <Clan _id="e0474473-6cf3-4b9f-ab15-2f90a1bfefdd" />
-    </Clanovi>
-  </Aktivnost>
-  <Aktivnost _id="a7360125-6c02-4f61-9289-95fc0dbfadb7" _naziv="Popravi pc shop" _opis="Popravi pokvareni pc shop" _vp="6/20/2024 1:04:18 AM" _vk="6/20/2024 1:04:18 AM" _idLokacije="1d3c21df-900d-4210-9c27-a4b3cf2c5b9a" _idProj="9df8ba32-a407-41ae-9b8e-666712cb25bc">
-    <Clanovi>
-      <Clan _id="bd804d6e-9c61-44f3-97f7-bc1b00dfe028" />
-      <Clan _id="8f72365f-384e-4e6c-b2e3-d3a0ee5d9e9f" />
-      <Clan _id="b566cc60-4f82-408b-99ac-e65e7cf833ee" />
-      <Clan _id="2a95143f-1589-4796-98f1-87b189b26c6f" />
-      <Clan _id="ffe6f7e2-0d52-47a8-9d38-d1e1b411dca0" />
-    </Clanovi>
-  </Aktivnost>
-  <Aktivnost _id="4c003848-67e5-4d33-b27c-7c256e07e732" _naziv="aktivnost1" _opis="opis1" _vp="6/23/2024 7:01:02 PM" _vk="6/23/2024 7:01:02 PM" _idLokacije="1d3c21df-900d-4210-9c27-a4b3cf2c5b9a" _idProj="9df8ba32-a407-41ae-9b8e-666712cb25bc">
-    <Clanovi>
-      <Clan _id="bd804d6e-9c61-44f3-97f7-bc1b00dfe028" />
+      <Clan _id="25edf984-4b9d-4086-b1df-7d675465aff8" />
+      <Clan _id="367e1d7a-a3e5-4574-b900-ddbb14ee9d98" />
+      <Clan _id="a6f1aa5d-31da-42a6-ad1c-d8558ae79fc2" />
     </Clanovi>
   </Aktivnost>
 </Aktivnosti>

@@ -16,9 +16,9 @@ namespace VUV_Projekti
         private Guid _idVoditelja;
         private Guid _idLokacije;
         private bool _Obrisan;
-        private int _Vrijednost;
+        private double _Vrijednost;
 
-        public Projekt(Guid idProjekta, string imeProjekta,List<Guid> lIdAktivnosti, List<Guid> ListaIdClanova, Guid idVoditelja, string nositelj, Guid idLokacije, int vrijednost)
+        public Projekt(Guid idProjekta, string imeProjekta,List<Guid> lIdAktivnosti, List<Guid> ListaIdClanova, Guid idVoditelja, string nositelj, Guid idLokacije, double vrijednost)
         {
             _IdProjekta = idProjekta;
             _ImeProjekta = imeProjekta;
@@ -31,7 +31,7 @@ namespace VUV_Projekti
             _Obrisan = false;
         }
 
-        public Projekt(Guid idProjekta, string imeProjekta, List<Guid> lIdAktivnosti, List<Guid> ListaIdClanova, Guid idVoditelja, string nositelj, Guid idLokacije, int vrijednost, bool status)
+        public Projekt(Guid idProjekta, string imeProjekta, List<Guid> lIdAktivnosti, List<Guid> ListaIdClanova, Guid idVoditelja, string nositelj, Guid idLokacije, double vrijednost, bool status)
         {
             _IdProjekta = idProjekta;
             _ImeProjekta = imeProjekta;
@@ -44,7 +44,7 @@ namespace VUV_Projekti
             _Obrisan = status;
         }
 
-        public int Vrijednost
+        public double Vrijednost
         {
             get { return _Vrijednost; }
         }
@@ -163,6 +163,58 @@ namespace VUV_Projekti
             }
         }
 
+        public void PromjeniVrijednost()
+        {
+            try
+            {
+                Console.WriteLine("Unesite novu vrijednost");
+                double novaVrijednost = Convert.ToDouble(Console.ReadLine());
+                _Vrijednost = novaVrijednost;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
         
+        public void PromjeniNositelja(List<ClanProjekta> ulaznaListaClanova)
+        {
+            string imeNositelja = "";
+            foreach (ClanProjekta cp in ulaznaListaClanova)
+            {
+                imeNositelja = $"{cp.Ime} {cp.Prezime}";
+                if(imeNositelja == _Nositelj)
+                {
+                    Console.WriteLine($"Trenutacni nositelj je {imeNositelja}");
+                }
+            }
+            List<ClanProjekta> listaClanovaProjektaBezNositelja = new List<ClanProjekta>();
+            foreach (ClanProjekta cp in ulaznaListaClanova)
+            {
+                string imeClana = $"{cp.Ime} {cp.Prezime}";
+                if (_ListaIdClanova.Contains(cp.Id) && imeClana != _Nositelj)
+                {
+                    listaClanovaProjektaBezNositelja.Add(cp);
+                }  
+            }
+            Console.WriteLine("Odaberite novog Nositelja");
+            for(int i = 0; i < listaClanovaProjektaBezNositelja.Count; i++)
+            {
+                string imeClana = $"{listaClanovaProjektaBezNositelja[i].Ime} {listaClanovaProjektaBezNositelja[i].Prezime}";
+                if(imeClana != _Nositelj)
+                {
+                    Console.WriteLine($"{i + 1}. {listaClanovaProjektaBezNositelja[i].Ime} {listaClanovaProjektaBezNositelja[i].Prezime}");
+                }
+            }
+            try
+            {
+                int odabir = Convert.ToInt32(Console.ReadLine())-1;
+                imeNositelja = $"{listaClanovaProjektaBezNositelja[odabir].Ime} {listaClanovaProjektaBezNositelja[odabir].Prezime}";
+                _Nositelj = imeNositelja;
+            }catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
     }
 }
