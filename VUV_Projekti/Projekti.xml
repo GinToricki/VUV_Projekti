@@ -1,67 +1,80 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Projekti>
-  <Projekt _id="b6228fd7-cfe9-4607-be37-80f256c1f73d" _ime="teStniprojekt" _obrisan="False" _idVoditelja="4fd63521-14c8-4008-b418-9262a82ebcb6" _nositelj="Tin Tinic" _vrijednost="5" _idLokacije="6cd9b250-8d95-4fa3-b97a-428172d7d4c7">
+  <Projekt _id="695ceb50-f3f5-491c-9815-36e93dd0731a" _ime="teStniprojekt" _obrisan="False" _idVoditelja="eb477e64-d9b8-4760-aa6d-6a8ed99754e8" _nositelj="Marko Maric" _vrijednost="713691011" _idLokacije="3b137091-3160-42e0-a6ef-98e11f920a4d">
     <Clanovi>
-      <Clan _id="cec11a44-f551-4818-8ead-adda2dc2273b" />
-      <Clan _id="8e10f330-47e3-4b17-969d-04cb75ed0e80" />
+      <Clan _id="eb477e64-d9b8-4760-aa6d-6a8ed99754e8" />
+      <Clan _id="edda7b84-34a8-4d85-a495-7736d01168fa" />
+      <Clan _id="4d126be6-32da-4908-a425-2dc31df5e84e" />
     </Clanovi>
     <Aktivnosti>
-      <Aktivnost _id="8eddb8a7-2ac7-41b8-bb2a-e1bd344e875e" />
+      <Aktivnost _id="c0ff7625-14b4-414c-8ca0-1b60cc13ff03" />
+      <Aktivnost _id="18d7a6f4-8fd7-43a7-a1bd-5daebb5bc5b9" />
+      <Aktivnost _id="788e0650-45c3-49ab-a99a-9bf38dcba9d5" />
     </Aktivnosti>
   </Projekt>
-  <Projekt _id="cb579f8d-2e89-43d4-ba03-8cab981c2ed1" _ime="NavySnail" _obrisan="False" _idVoditelja="ebd33b6b-7067-4017-9609-6e01d4f4d4ee" _nositelj="Ana Anic" _vrijednost="6" _idLokacije="66f1dd53-d562-430f-b037-6c5747d82f59">
+  <Projekt _id="cd19d1be-c94e-4d7e-8bfc-ce87d52ce1d8" _ime="NavySnail" _obrisan="False" _idVoditelja="98594e8f-4753-480d-85fe-697abf8d960e" _nositelj="Ana Anic" _vrijednost="500192330" _idLokacije="c14c5a83-4623-49ba-8755-422236f24166">
     <Clanovi>
-      <Clan _id="ebd33b6b-7067-4017-9609-6e01d4f4d4ee" />
-      <Clan _id="03894fe4-1b2a-41bd-8c56-977c849daa5b" />
-      <Clan _id="f1b03c07-d655-40c8-b2ae-7e6c10486022" />
+      <Clan _id="98594e8f-4753-480d-85fe-697abf8d960e" />
+      <Clan _id="c3f2e795-01a2-44c2-9c13-4bed81d12d1f" />
+      <Clan _id="84bbaefd-bf01-420b-99dc-167fbdfff639" />
     </Clanovi>
     <Aktivnosti>
-      <Aktivnost _id="4ce49c4e-c3d6-45ae-9fe5-042bab09b54c" />
+      <Aktivnost _id="8f5e5407-3ea1-4def-8038-2f10100e2097" />
+      <Aktivnost _id="3e0387fa-caab-4b18-85f0-39acfc01b297" />
+      <Aktivnost _id="ecd2e662-98d2-4dec-a786-9d98a611c0de" />
     </Aktivnosti>
   </Projekt>
-  <Projekt _id="5557b11e-2ae9-4476-9f77-cf0a15974b3a" _ime="BlackFlea" _obrisan="False" _idVoditelja="9fe4b822-a45a-4a19-9315-6a5d0c1625e6" _nositelj="Luka Lukic" _vrijednost="7" _idLokacije="66f1dd53-d562-430f-b037-6c5747d82f59">
+  <Projekt _id="83e1f61a-3123-4682-a562-3e4077916f94" _ime="BlackFlea" _obrisan="False" _idVoditelja="33cf0620-86d7-439e-8d72-779b83073652" _nositelj="Luka Lukic" _vrijednost="608416784" _idLokacije="c14c5a83-4623-49ba-8755-422236f24166">
     <Clanovi>
-      <Clan _id="9fe4b822-a45a-4a19-9315-6a5d0c1625e6" />
-      <Clan _id="b4fbbe46-b973-44eb-8190-b42ebc4a9303" />
-      <Clan _id="4a6fe4de-9807-492e-adbc-956a74b6e42d" />
+      <Clan _id="33cf0620-86d7-439e-8d72-779b83073652" />
+      <Clan _id="e24cb634-a87c-4d1c-9b32-adafb03c7070" />
+      <Clan _id="f68af134-51e7-449b-8a57-9f149f9ea812" />
     </Clanovi>
     <Aktivnosti>
-      <Aktivnost _id="610aac4a-bd9b-4a9c-9f1d-24a769f9139e" />
+      <Aktivnost _id="0409e2c9-91c5-43f6-9d0d-afac6709d79b" />
+      <Aktivnost _id="a3f09140-9489-4eee-95af-388220d21c4b" />
+      <Aktivnost _id="1cfb8f46-9e4a-4344-92be-6c7a52e5db78" />
     </Aktivnosti>
   </Projekt>
-  <Projekt _id="c0e3240a-654a-4f1e-9793-f04f072a6bbb" _ime="AquaTitanium" _obrisan="False" _idVoditelja="d11cf908-d99e-4e36-a050-45ea5d40d8a0" _nositelj="Iva Ivic" _vrijednost="8" _idLokacije="1568953b-3c24-4ae7-b264-c340bff9c5a1">
+  <Projekt _id="1e14ce8d-ba40-4684-984e-3940fd1ef332" _ime="AquaTitanium" _obrisan="False" _idVoditelja="98e3fbda-0ac3-48c2-98fb-0a84ba1a3bc9" _nositelj="Iva Ivic" _vrijednost="902257809" _idLokacije="1ae078ad-2b04-44c1-91ed-bd07fbc81dce">
     <Clanovi>
-      <Clan _id="d11cf908-d99e-4e36-a050-45ea5d40d8a0" />
-      <Clan _id="8e091d53-c3fa-4fc5-9e48-1466d67c11da" />
-      <Clan _id="824fd573-9369-40d8-bc60-a350286780e5" />
+      <Clan _id="98e3fbda-0ac3-48c2-98fb-0a84ba1a3bc9" />
+      <Clan _id="bea18ee1-57bc-4597-b42e-66d7e9de8b9d" />
+      <Clan _id="4a0bdc37-1ca0-45b5-b889-0cddbedd5789" />
     </Clanovi>
     <Aktivnosti>
-      <Aktivnost _id="0f7f0a0b-ddd9-4171-bf32-c519a3cbcc51" />
+      <Aktivnost _id="1cbe0b8a-b994-4948-bfd6-46450dd02983" />
+      <Aktivnost _id="2b242063-9662-4f8b-80d0-84d5fa90e227" />
+      <Aktivnost _id="4d9daa25-5f89-4f80-a6dc-c6105cfb7490" />
     </Aktivnosti>
   </Projekt>
-  <Projekt _id="402d11ae-38d1-4147-ac5d-732ef07106c0" _ime="YellowZinc" _obrisan="False" _idVoditelja="25edf984-4b9d-4086-b1df-7d675465aff8" _nositelj="Tomo Tomic" _vrijednost="9" _idLokacije="1568953b-3c24-4ae7-b264-c340bff9c5a1">
+  <Projekt _id="01afccdf-73c2-47c9-98d5-daaa20107021" _ime="YellowZinc" _obrisan="False" _idVoditelja="e065425d-044f-4a83-8a8a-0d069e6d7c3a" _nositelj="Tomo Tomic" _vrijednost="480386624" _idLokacije="1ae078ad-2b04-44c1-91ed-bd07fbc81dce">
     <Clanovi>
-      <Clan _id="25edf984-4b9d-4086-b1df-7d675465aff8" />
-      <Clan _id="367e1d7a-a3e5-4574-b900-ddbb14ee9d98" />
-      <Clan _id="a6f1aa5d-31da-42a6-ad1c-d8558ae79fc2" />
+      <Clan _id="e065425d-044f-4a83-8a8a-0d069e6d7c3a" />
+      <Clan _id="88bd8ef7-8a48-4b4b-89a1-250523905a73" />
+      <Clan _id="79987e8c-5e02-4cb6-a188-45599bf77fef" />
     </Clanovi>
     <Aktivnosti>
-      <Aktivnost _id="d04ad6fc-645d-41a0-beb5-e9f98ecf88d4" />
+      <Aktivnost _id="ae861fdd-4285-4688-92e6-439239f3cc97" />
+      <Aktivnost _id="8141653c-cc02-4013-95d0-9646eb287ca2" />
+      <Aktivnost _id="711e5ade-b672-468e-85d3-9f337377ccd5" />
     </Aktivnosti>
   </Projekt>
-  <Projekt _id="9dacf69f-2dc0-4edb-9e4f-00c4ef6869cd" _ime="BlackTitanium" _obrisan="True" _idVoditelja="4fd63521-14c8-4008-b418-9262a82ebcb6" _nositelj="Tomo Tomic" _vrijednost="3" _idLokacije="6cd9b250-8d95-4fa3-b97a-428172d7d4c7">
-    <Clanovi />
+  <Projekt _id="87d33544-c22c-4534-a9ab-8391094e50d1" _ime="BlackTitanium" _obrisan="True" _idVoditelja="eb477e64-d9b8-4760-aa6d-6a8ed99754e8" _nositelj="Tomo Tomic" _vrijednost="38704259" _idLokacije="3b137091-3160-42e0-a6ef-98e11f920a4d">
+    <Clanovi>
+      <Clan _id="eb477e64-d9b8-4760-aa6d-6a8ed99754e8" />
+    </Clanovi>
     <Aktivnosti />
   </Projekt>
-  <Projekt _id="f28f6b2c-77e4-486a-be49-f54b90c9101d" _ime="PurpleCopper" _obrisan="True" _idVoditelja="cec11a44-f551-4818-8ead-adda2dc2273b" _nositelj="Marko Maric" _vrijednost="3" _idLokacije="6cd9b250-8d95-4fa3-b97a-428172d7d4c7">
+  <Projekt _id="990285b3-254d-4375-aedc-46e62be9268e" _ime="PurpleCopper" _obrisan="True" _idVoditelja="edda7b84-34a8-4d85-a495-7736d01168fa" _nositelj="Marko Maric" _vrijednost="467455345" _idLokacije="3b137091-3160-42e0-a6ef-98e11f920a4d">
     <Clanovi>
-      <Clan _id="cec11a44-f551-4818-8ead-adda2dc2273b" />
+      <Clan _id="edda7b84-34a8-4d85-a495-7736d01168fa" />
     </Clanovi>
     <Aktivnosti />
   </Projekt>
-  <Projekt _id="99b9798e-e8f1-49e8-b418-fc03c1d666d7" _ime="NavySteel" _obrisan="True" _idVoditelja="8e10f330-47e3-4b17-969d-04cb75ed0e80" _nositelj="Tomo Tomic" _vrijednost="3" _idLokacije="6cd9b250-8d95-4fa3-b97a-428172d7d4c7">
+  <Projekt _id="98d3dd20-ab8c-4108-9deb-fdde8bc8c0bd" _ime="NavySteel" _obrisan="True" _idVoditelja="4d126be6-32da-4908-a425-2dc31df5e84e" _nositelj="Tomo Tomic" _vrijednost="445590282" _idLokacije="3b137091-3160-42e0-a6ef-98e11f920a4d">
     <Clanovi>
-      <Clan _id="8e10f330-47e3-4b17-969d-04cb75ed0e80" />
+      <Clan _id="4d126be6-32da-4908-a425-2dc31df5e84e" />
     </Clanovi>
     <Aktivnosti />
   </Projekt>

@@ -336,15 +336,13 @@ namespace VUV_Projekti
                 }
             }
             Console.WriteLine("Voditelj tog projekta je " + voditelj);
+            var tableAktivnost = new ConsoleTable("Ime Aktivnosti", "Opis Aktivnosti", "Vrijeme Pocetka", "Lokacija", "Clanovi");
             foreach (Guid idAktivnosti in prikazaniProjekt.ListaIdAktivnosti)
             {
                 foreach (Aktivnost ak in ulaznaListaAktivnosti)
                 {
                     if (ak.IdAktivnosti == idAktivnosti)
                     {
-                        Console.WriteLine($"Naziv aktivnosti je {ak.Naziv}");
-                        Console.WriteLine($"Opis aktivnosti je {ak.Opis}");
-                        Console.WriteLine($"Vrijeme pocetka aktivnost je {ak.VrijemePocetka}");
                         string lokacija = "";
                         foreach (Lokacija lok in ulaznaListaLokacija)
                         {
@@ -353,21 +351,31 @@ namespace VUV_Projekti
                                 lokacija = $"{lok.Grad}, {lok.pBroj}, {lok.Adresa}, {lok.Lat}, {lok.Long}";
                             }
                         }
-                        Console.WriteLine($"Lokacija Aktivnosti je {lokacija}");
-                        Console.WriteLine("Clanovi koji sudjeluju na toj aktivnosti su: ");
+                        string clanovi = "";
+                        int br2 = 0;
                         foreach (Guid idClanovaAktivnosti in ak.LIdClanovaProjekta)
                         {
                             foreach (ClanProjekta cp in ulaznaListaClanova)
                             {
                                 if (cp.Id == idClanovaAktivnosti)
                                 {
-                                    Console.WriteLine($"{cp.Ime} {cp.Prezime} {cp.Oib}");
+                                    if (br2 == 0)
+                                    {
+                                        clanovi += $"{cp.Ime} {cp.Prezime} {cp.Oib}";
+                                    }
+                                    else
+                                    {
+                                        clanovi += $", {cp.Ime} {cp.Prezime} {cp.Oib}";
+                                    }
+                                    br2++;
                                 }
                             }
                         }
+                        tableAktivnost.AddRow(ak.Naziv, ak.Opis, ak.VrijemePocetka, lokacija, clanovi);
                     }
                 }
             }
+            tableAktivnost.Write();
             Console.WriteLine();
         }
 

@@ -15,10 +15,14 @@ namespace VUV_Projekti
         private List<Aktivnost> listaAktivnosti;
         private List<Projekt> listaProjekta;
         private List<Lokacija> listaLokacija;
+        string clanoviPath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "ClanoviProjekta.xml");
+        string aktivnostPath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "Aktivnosti.xml");
+        string projektiPath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "Projekti.xml");
+        string lokacijePath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "Lokacije.xml");
         public List<ClanProjekta> UcitajClanove()
         {
             string xml = "";
-            using(StreamReader sr = new StreamReader(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\ClanoviProjekta.xml"))
+            using(StreamReader sr = new StreamReader(clanoviPath))
             {
                 xml = sr.ReadToEnd();
             }
@@ -48,7 +52,7 @@ namespace VUV_Projekti
         public void ZapisiClanove(List<ClanProjekta> clanovi)
         {
             string xml = "";
-            using (StreamReader sr = new StreamReader(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\ClanoviProjekta.xml"))
+            using (StreamReader sr = new StreamReader(clanoviPath))
             {
                 xml = sr.ReadToEnd();
             }
@@ -82,13 +86,13 @@ namespace VUV_Projekti
                 projektNode.AppendChild(noviNode);
             }
 
-            xmlObject.Save(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\ClanoviProjekta.xml");
+            xmlObject.Save(clanoviPath);
         }
 
         public List<Aktivnost> UcitajAktivnosti()
         {
             string xml = "";
-            using (StreamReader sr = new StreamReader(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\Aktivnosti.xml"))
+            using (StreamReader sr = new StreamReader(aktivnostPath))
             {
                 xml = sr.ReadToEnd();
             }
@@ -127,7 +131,8 @@ namespace VUV_Projekti
         public void ZapisiAktivnosti(List<Aktivnost> lAktivnosti)
         {
             string xml = "";
-            using (StreamReader sr = new StreamReader(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\Aktivnosti.xml"))
+            
+            using (StreamReader sr = new StreamReader(aktivnostPath))
             {
                 xml = sr.ReadToEnd();
             }
@@ -174,13 +179,13 @@ namespace VUV_Projekti
                 projektNode.AppendChild(noviNode);
             }
 
-            xmlObject.Save(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\Aktivnosti.xml");
+            xmlObject.Save(aktivnostPath);
         }
 
         public List<Projekt> UcitajProjekte()
         {
             string xml = "";
-            using (StreamReader sr = new StreamReader(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\Projekti.xml"))
+            using (StreamReader sr = new StreamReader(projektiPath))
             {
                 xml = sr.ReadToEnd();
             }
@@ -223,7 +228,7 @@ namespace VUV_Projekti
         public void ZapisiProjekte(List<Projekt> lProjekta)
         {
             string xml = "";
-            using (StreamReader sr = new StreamReader(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\Projekti.xml"))
+            using (StreamReader sr = new StreamReader(projektiPath))
             {
                 xml = sr.ReadToEnd();
             }
@@ -281,13 +286,13 @@ namespace VUV_Projekti
                 projektNode.AppendChild(noviNode);
             }
 
-            xmlObject.Save(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\Projekti.xml");
+            xmlObject.Save(projektiPath);
         }
 
         public List<Lokacija> UcitajLokacije()
         {
             string xml = "";
-            using (StreamReader sr = new StreamReader(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\Lokacije.xml"))
+            using (StreamReader sr = new StreamReader(lokacijePath))
             {
                 xml = sr.ReadToEnd();
             }
@@ -315,7 +320,7 @@ namespace VUV_Projekti
         public void ZapisiLokacije(List<Lokacija> lLokacija)
         {
             string xml = "";
-            using (StreamReader sr = new StreamReader(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\Lokacije.xml"))
+            using (StreamReader sr = new StreamReader(lokacijePath))
             {
                 xml = sr.ReadToEnd();
             }
@@ -348,7 +353,7 @@ namespace VUV_Projekti
                 projektNode.AppendChild(noviNode);
             }
 
-            xmlObject.Save(@"C:\Users\exibo\source\repos\VUV_Projekti\VUV_Projekti\Lokacije.xml");
+            xmlObject.Save(lokacijePath);
         }
     }
 }
