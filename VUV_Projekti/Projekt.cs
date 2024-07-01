@@ -142,7 +142,7 @@ namespace VUV_Projekti
                     Console.WriteLine("Ponovo unesite oib");
                 }
                 int dob = Convert.ToInt32(Console.ReadLine());
-                ClanProjekta noviClan = new ClanProjekta(Guid.NewGuid(),ime, prezime, oib, dob);
+                ClanProjekta noviClan = new ClanProjekta(Guid.NewGuid(),ime, prezime, oib, DateTime.Now);
                 Console.WriteLine("Uspijesno ste dodali clana Projekta");
             }
             catch (Exception E)

@@ -16,21 +16,21 @@ namespace VUV_Projekti
         {
 
 
-            ClanProjekta c1 = new ClanProjekta(Guid.NewGuid(), "Tin", "Tinic", "1234567890", 23);
-            ClanProjekta c2 = new ClanProjekta(Guid.NewGuid(), "Marko", "Maric", "3106465331", 25);
-            ClanProjekta c3 = new ClanProjekta(Guid.NewGuid(), "Luka", "Lukic", "4001141091", 26);
-            ClanProjekta c4 = new ClanProjekta(Guid.NewGuid(), "Iva", "Ivic", "7329962608", 21);
-            ClanProjekta c5 = new ClanProjekta(Guid.NewGuid(), "Ana", "Anic", "3255805385", 23);
-            ClanProjekta c6 = new ClanProjekta(Guid.NewGuid(), "Lucija", "Lucic", "7445589915", 22);
-            ClanProjekta c7 = new ClanProjekta(Guid.NewGuid(), "Lara", "Zeljko", "7107203201", 19);
-            ClanProjekta c8 = new ClanProjekta(Guid.NewGuid(), "Neven", "Pavlovic", "1892122323", 19);
-            ClanProjekta c9 = new ClanProjekta(Guid.NewGuid(), "Ivan", "Kanjka", "8535913317", 20);
-            ClanProjekta c10 = new ClanProjekta(Guid.NewGuid(), "Filip", "Stanja", "4396431148", 20);
-            ClanProjekta c11 = new ClanProjekta(Guid.NewGuid(), "Micoje", "Stanja", "8484462278", 20);
-            ClanProjekta c12 = new ClanProjekta(Guid.NewGuid(), "Fran", "Jurkic", "5767991886", 20);
-            ClanProjekta c13 = new ClanProjekta(Guid.NewGuid(), "Domagoj", "Paukovic", "7465203617", 20);
-            ClanProjekta c14 = new ClanProjekta(Guid.NewGuid(), "Sebastijan", "Senic", "9769384345", 20);
-            ClanProjekta c15 = new ClanProjekta(Guid.NewGuid(), "Luka", "Petras", "3995890681", 20);
+            ClanProjekta c1 = new ClanProjekta(Guid.NewGuid(), "Tin", "Tinic", "1234567890", DateTime.Now);
+            ClanProjekta c2 = new ClanProjekta(Guid.NewGuid(), "Marko", "Maric", "3106465331", DateTime.Now);
+            ClanProjekta c3 = new ClanProjekta(Guid.NewGuid(), "Luka", "Lukic", "4001141091", DateTime.Now);
+            ClanProjekta c4 = new ClanProjekta(Guid.NewGuid(), "Iva", "Ivic", "7329962608", DateTime.Now);
+            ClanProjekta c5 = new ClanProjekta(Guid.NewGuid(), "Ana", "Anic", "3255805385", DateTime.Now);
+            ClanProjekta c6 = new ClanProjekta(Guid.NewGuid(), "Lucija", "Lucic", "7445589915", DateTime.Now);
+            ClanProjekta c7 = new ClanProjekta(Guid.NewGuid(), "Lara", "Zeljko", "7107203201", DateTime.Now);
+            ClanProjekta c8 = new ClanProjekta(Guid.NewGuid(), "Neven", "Pavlovic", "1892122323", DateTime.Now);
+            ClanProjekta c9 = new ClanProjekta(Guid.NewGuid(), "Ivan", "Kanjka", "8535913317", DateTime.Now);
+            ClanProjekta c10 = new ClanProjekta(Guid.NewGuid(), "Filip", "Stanja", "4396431148", DateTime.Now);
+            ClanProjekta c11 = new ClanProjekta(Guid.NewGuid(), "Micoje", "Stanja", "8484462278", DateTime.Now);
+            ClanProjekta c12 = new ClanProjekta(Guid.NewGuid(), "Fran", "Jurkic", "5767991886", DateTime.Now);
+            ClanProjekta c13 = new ClanProjekta(Guid.NewGuid(), "Domagoj", "Paukovic", "7465203617", DateTime.Now);
+            ClanProjekta c14 = new ClanProjekta(Guid.NewGuid(), "Sebastijan", "Senic", "9769384345", DateTime.Now);
+            ClanProjekta c15 = new ClanProjekta(Guid.NewGuid(), "Luka", "Petras", "3995890681", DateTime.Now);
 
             List<ClanProjekta> clanovi = new List<ClanProjekta>() { c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15 };
 
@@ -89,10 +89,10 @@ namespace VUV_Projekti
             Izbornik i1 = new Izbornik();
 
 
-            dk1.ZapisiClanove(clanovi);
+            /*dk1.ZapisiClanove(clanovi);
             dk1.ZapisiLokacije(listaLokacija);
             dk1.ZapisiAktivnosti(lAktivnosti);
-            dk1.ZapisiProjekte(lProjekta);
+            dk1.ZapisiProjekte(lProjekta);*/
             i1.PrikaziIzbornik();
             Console.ReadKey();
         }

@@ -9,7 +9,12 @@ namespace VUV_Projekti
     class ClanProjekta : Osoba
     {
         private Guid _id;
-        public ClanProjekta(Guid id,string ime, string prezime, string oib, int dob)
+
+        public ClanProjekta()
+        {
+
+        }
+        public ClanProjekta(Guid id,string ime, string prezime, string oib, DateTime dob)
         {
             _id = id;
             _Ime = ime;
@@ -19,7 +24,7 @@ namespace VUV_Projekti
             _Obrisan = false;
         }
 
-        public ClanProjekta(Guid id, string ime, string prezime, string oib, int dob, bool obrisan)
+        public ClanProjekta(Guid id, string ime, string prezime, string oib, DateTime dob, bool obrisan)
         {
             _id = id;
             _Ime = ime;
@@ -53,7 +58,7 @@ namespace VUV_Projekti
             set { _Obrisan = value; }
         }
 
-        public int Dob
+        public DateTime Dob
         {
             get { return _Dob; }
         }

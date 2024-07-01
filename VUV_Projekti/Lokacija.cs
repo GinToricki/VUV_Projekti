@@ -15,6 +15,11 @@ namespace VUV_Projekti
         private string _Latituda;
         private string _Longituda;
 
+        public Lokacija()
+        {
+
+        }
+
         public Lokacija(Guid idLokacije, string Adresa, string pBroj, string grad, string lat, string longituda)
         {
             _idLokacije = idLokacije;

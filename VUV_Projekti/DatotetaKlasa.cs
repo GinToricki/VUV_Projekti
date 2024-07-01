@@ -40,7 +40,7 @@ namespace VUV_Projekti
                     clanProjekta.Attributes["_ime"].Value,
                     clanProjekta.Attributes["_prezime"].Value,
                     clanProjekta.Attributes["_oib"].Value,
-                    Convert.ToInt32(clanProjekta.Attributes["_dob"].Value),
+                    DateTime.Parse(clanProjekta.Attributes["_dob"].Value),
                     Convert.ToBoolean(clanProjekta.Attributes["_obrisan"].Value)
                     ));
             }

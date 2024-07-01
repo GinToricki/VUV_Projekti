@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Lokacije>
-  <Lokacija _id="3b137091-3160-42e0-a6ef-98e11f920a4d" _adresa="Savska cesta 32" _pBroj="10000" _grad="Zagreb" _lat="45.815399" _long="15.966568" />
-  <Lokacija _id="c14c5a83-4623-49ba-8755-422236f24166" _adresa="Poduzetnička zona 2" _pBroj="33000" _grad="Virovitica" _lat="45.83194" _long="17.38389" />
-  <Lokacija _id="1ae078ad-2b04-44c1-91ed-bd07fbc81dce" _adresa="IT park Osijek 1" _pBroj="31000" _grad="Osijek" _lat="45.55111" _long="18.69389" />
+  <Lokacija _id="667ab5db-7094-4158-b3b0-47087d3da065" _adresa="Savska cesta 32" _pBroj="10000" _grad="Zagreb" _lat="45.815399" _long="15.966568" />
+  <Lokacija _id="b25f961f-9645-447c-961e-ce5433c900a6" _adresa="Poduzetnička zona 2" _pBroj="33000" _grad="Virovitica" _lat="45.83194" _long="17.38389" />
+  <Lokacija _id="b8b1b4c4-b21f-4337-b374-f41171e22980" _adresa="IT park Osijek 1" _pBroj="31000" _grad="Osijek" _lat="45.55111" _long="18.69389" />
 </Lokacije>

@@ -11,7 +11,7 @@ namespace VUV_Projekti
         protected string _Ime;
         protected string _Prezime;
         protected string _Oib;
-        protected int _Dob;
+        protected DateTime _Dob;
         protected bool _Obrisan;
            
     }
