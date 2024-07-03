@@ -88,6 +88,11 @@ namespace VUV_Projekti
             set { _Obrisan = value; }
         }
 
+        public void DodavanjeAktivnosti(Guid idAktivnosti)
+        {
+            _ListaIdAktivnosti.Add(idAktivnosti);
+        }
+
         private bool PotvrdiOib(string oib)
         {
             //dodati da ne mogu biti 2 ista oiba

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="VUV_Projekti.Osoba">
+  <Class Name="VUV_Projekti.Osoba" Collapsed="true">
     <Position X="0.5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAACAAABAABAAAAAAAAAgAAAA=</HashCode>
@@ -17,28 +17,28 @@
   <Class Name="VUV_Projekti.DatotetaKlasa" Collapsed="true">
     <Position X="2.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAmAAAAAQAABAABAAAAAQAGAiAAgAAAAABAAAIAIAAA=</HashCode>
+      <HashCode>AAGAAAAAIAAgAABAAAAAQAGAqAAgAAAAABAAAIAIEAA=</HashCode>
       <FileName>DatotetaKlasa.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="VUV_Projekti.Projekt" Collapsed="true">
     <Position X="4.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAEAkDIAkEYBAIAAAAACABAAAABAAAABABAAkAAA=</HashCode>
+      <HashCode>AAQAAEAkDIAkEcBAIQAAAACABAAAABAAAABABAAkCAA=</HashCode>
       <FileName>Projekt.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="VUV_Projekti.Aktivnost" Collapsed="true">
     <Position X="6.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAAAABAAAAAAAEAABCQAQAAGAQAQQBAABABAAAQAgBA=</HashCode>
+      <HashCode>QAAAABAAAAAAAEAABCQAQAAGAQAQQBAABABAAAQggBA=</HashCode>
       <FileName>Aktivnost.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="VUV_Projekti.Izbornik" Collapsed="true">
     <Position X="8.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgAARAAQAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <HashCode>AAgAQRAAQAAhAAAESAAAIAAAAAARAAAFAAAAAAAEAAE=</HashCode>
       <FileName>Izbornik.cs</FileName>
     </TypeIdentifier>
   </Class>
