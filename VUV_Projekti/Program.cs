@@ -40,7 +40,7 @@ namespace VUV_Projekti
             List<Lokacija> listaLokacija = new List<Lokacija>() { l1, l3 };
 
 
-            Aktivnost a1 = new Aktivnost(Guid.NewGuid(), "Nabavi dozvole", "Nabaviti potrebne dozvole za vrstu bazena, provjeriti lokalne propise", DateTime.Now.AddDays(-60), DateTime.Now, l1, new List<ClanProjekta> { c1, c2, c3 }, l1.IdLokacije, new List<Guid> { c1.Id, c2.Id, c3.Id }, true);
+            Aktivnost a1 = new Aktivnost(Guid.NewGuid(), "Nabavi dozvole", "Nabaviti potrebne dozvole za vrstu bazena, provjeriti lokalne propise", DateTime.Now.AddDays(-60), DateTime.Now, l1, new List<ClanProjekta> { c1, c2, c3,c6 }, l1.IdLokacije, new List<Guid> { c1.Id, c2.Id, c3.Id, c6.Id }, true);
             Aktivnost a2 = new Aktivnost(Guid.NewGuid(), "Dizajnirati bazen", "Uspostavite konačni dizajn bazena, uključujući oblikovanje, materijale, opremu i značajke.", DateTime.Now.AddDays(-30), DateTime.Now, l1, new List<ClanProjekta> { c4, c5}, l1.IdLokacije, new List<Guid> { c4.Id, c5.Id});
             Aktivnost a3 = new Aktivnost(Guid.NewGuid(), "Iskop i priprema terena", "Pripremite teren za izgradnju, uključujući iskopavanje rupe i izravnavanje tla.", DateTime.Now.AddDays(-20), DateTime.Now, l1, new List<ClanProjekta> { c7}, l1.IdLokacije, new List<Guid> { c7.Id });
             Aktivnost a4 = new Aktivnost(Guid.NewGuid(), "Izgradnja strukture bazena", "Ovisno o vrsti bazena, to može uključivati ​​izgradnju betonskih zidova, postavljanje liner-a ili montažu metalnih panela.", DateTime.Now.AddDays(-25), DateTime.Now, l1, new List<ClanProjekta> { c7}, l1.IdLokacije, new List<Guid> { c7.Id});
@@ -79,10 +79,10 @@ namespace VUV_Projekti
             Izbornik i1 = new Izbornik();
 
 
-           /* dk1.ZapisiClanove(clanovi);
+           dk1.ZapisiClanove(clanovi);
             dk1.ZapisiLokacije(listaLokacija);
             dk1.ZapisiAktivnosti(lAktivnosti);
-            dk1.ZapisiProjekte(lProjekta);*/
+            dk1.ZapisiProjekte(lProjekta);
             i1.PrikaziIzbornik();
             Console.ReadKey();
         }

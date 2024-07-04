@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Lokacije>
-  <Lokacija _id="370a00d0-a35e-41e9-b39e-f0a4490995f2" _adresa="Savska cesta 32" _pBroj="10000" _grad="Zagreb" _lat="45.815399" _long="15.966568" />
-  <Lokacija _id="993d0313-99d4-4fdc-b94f-e885962b476a" _adresa="Park Osijek 1" _pBroj="31000" _grad="Osijek" _lat="45.55111" _long="18.69389" />
+  <Lokacija _id="f0ae7607-6ef7-4b65-96d6-268bed376578" _adresa="Savska cesta 32" _pBroj="10000" _grad="Zagreb" _lat="45.815399" _long="15.966568" />
+  <Lokacija _id="6c9b0782-df6a-4270-90b0-c082f3610ac4" _adresa="Park Osijek 1" _pBroj="31000" _grad="Osijek" _lat="45.55111" _long="18.69389" />
 </Lokacije>

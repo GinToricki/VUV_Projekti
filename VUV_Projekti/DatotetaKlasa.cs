@@ -35,13 +35,18 @@ namespace VUV_Projekti
             XmlNodeList clanovi = xmlObject.SelectNodes("//Clanovi/ClanProjekta");
             foreach(XmlNode clanProjekta in clanovi)
             {
-                if(!DateTime.TryParse(clanProjekta.Attributes["_dob"].Value, out DateTime _))
-                {
-                    string poruka = $"Za clana s id: {clanProjekta.Attributes["_id"].Value} nije pravilno unesen dateTime";
-                    throw new DatotekaException(poruka);
-                }
                 try
                 {
+                    if(!bool.TryParse(clanProjekta.Attributes["_obrisan"].Value, out bool _))
+                    {
+                        string poruka = $"Za clana s id: {clanProjekta.Attributes["_id"].Value} nije pravilno unesen _obrisan";
+                        throw new DatotekaException(poruka);
+                    }
+                    if (!DateTime.TryParse(clanProjekta.Attributes["_dob"].Value, out DateTime _))
+                    {
+                        string poruka = $"Za clana s id: {clanProjekta.Attributes["_id"].Value} nije pravilno unesen dateTime";
+                        throw new DatotekaException(poruka);
+                    }
                     clanoviProjekta.Add(new ClanProjekta(
                    new Guid(clanProjekta.Attributes["_id"].Value),
                    clanProjekta.Attributes["_ime"].Value,
@@ -118,7 +123,7 @@ namespace VUV_Projekti
             {
                 try
                 {
-                    if (Boolean.TryParse(ak.Attributes["_obrisan"].Value, out bool _))
+                    if (!bool.TryParse(ak.Attributes["_obrisan"].Value, out bool _))
                     {
                         string pogreska = $"za {ak.Attributes["_naziv"].Value} ne valja vrijednost atributa obrisan tipa boolean";
                         throw new DatotekaException(pogreska);
@@ -240,6 +245,16 @@ namespace VUV_Projekti
             {
                 try
                 {
+                    if (!Double.TryParse(p.Attributes["_vrijednost"].Value, out double _))
+                    {
+                        string poruka = $"Za projekt s id: {p.Attributes["_id"].Value} nije pravilno unesena vrijednost";
+                        throw new DatotekaException(poruka);
+                    }
+                    if (!bool.TryParse(p.Attributes["_obrisan"].Value, out bool _))
+                    {
+                        string poruka = $"Za projekt s id: {p.Attributes["_id"].Value} nije pravilno bool _obrisan";
+                        throw new DatotekaException(poruka);
+                    }
                     List<Guid> listaIdClanova = new List<Guid>();
                     List<Guid> listaIdAktivnosti = new List<Guid>();
                     for (XmlNode i = p.FirstChild.FirstChild; i != null; i = i.NextSibling)
@@ -287,6 +302,7 @@ namespace VUV_Projekti
 
             foreach (Projekt p in lProjekta)
             {
+
                 XmlNode noviNode = xmlObject.CreateNode(XmlNodeType.Element, "Projekt", null);
                 XmlAttribute idAttr = xmlObject.CreateAttribute("_id");
                 idAttr.Value = p.IdProjekta.ToString();
