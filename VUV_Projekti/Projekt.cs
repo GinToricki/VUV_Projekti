@@ -106,6 +106,83 @@ namespace VUV_Projekti
             }
         }
 
+        public void IzbrisiAktivnost(DatotetaKlasa dk, List<Aktivnost> ulaznaListaAktivnosti)
+        {
+            List<Aktivnost> lAktivnostiZabrisanje = new List<Aktivnost>();
+            foreach(Aktivnost a in ulaznaListaAktivnosti)
+            {
+                if(_ListaIdAktivnosti.Contains(a.IdAktivnosti) && !a.Status)
+                {
+                    lAktivnostiZabrisanje.Add(a);
+                }
+            }
+            bool vrti = true;
+            while (vrti)
+            {
+                Console.WriteLine("1. Za brisanje aktivnosti\n2. za Izlaz");
+                string odabirRadnje = Console.ReadLine();
+                switch (odabirRadnje)
+                {
+                    case "1":
+
+                        if (lAktivnostiZabrisanje.Count == 0)
+                        {
+                            Console.WriteLine("Nema aktivnosti za brisanje");
+                            vrti = false;
+                        }
+                        else
+                        {
+                            for (int i = 0; i < lAktivnostiZabrisanje.Count; i++)
+                            {
+                                Console.WriteLine($"{i + 1}. {lAktivnostiZabrisanje[i].Naziv}");
+                            }
+                            Console.WriteLine("Unesite koju aktivnost zelite obrisati");
+                            string odabir5;
+                            while (true)
+                            {
+                                odabir5 = Console.ReadLine();
+                                if (!Int32.TryParse(odabir5, out int _))
+                                {
+                                    Console.WriteLine("Pogresan unos. Morate unesti broj");
+                                }
+                                else if (Convert.ToInt32(odabir5) - 1 < 0)
+                                {
+                                    Console.WriteLine("Odabir aktivnosti ne smije biti manji od nula. Ponovite unos");
+                                }
+                                else if (Convert.ToInt32(odabir5) - 1 >= lAktivnostiZabrisanje.Count)
+                                {
+                                    Console.WriteLine("Odabir aktivnosti ne smije biti veci od " + lAktivnostiZabrisanje.Count + ". Ponovite unos");
+                                }
+                                else
+                                {
+                                    break;
+                                }
+                            }
+                            int odabir2 = Convert.ToInt32(odabir5) - 1;
+                            foreach (Aktivnost ak in ulaznaListaAktivnosti)
+                            {
+                                if (lAktivnostiZabrisanje[odabir2].IdAktivnosti == ak.IdAktivnosti)
+                                {
+                                    ak.Status = true;
+                                    Console.WriteLine("Brisemo aktivnost " + lAktivnostiZabrisanje[odabir2].Naziv);
+                                    ak.VrijemeKraja = DateTime.Now;
+                                    
+                                }
+                            }
+                            lAktivnostiZabrisanje.RemoveAt(odabir2);
+                        }
+                        dk.ZapisiAktivnosti(ulaznaListaAktivnosti);
+                        break;
+                    case "2":
+                        vrti = false;
+                        break;
+                    default:
+                        Console.WriteLine("Pogresan unos");
+                        break;
+                }
+            }
+        }
+
         public void PromjenaVoditelja(List<ClanProjekta> ulaznaListaClanova)
         {
             List<ClanProjekta> lClanovaBezVoditelja = new List<ClanProjekta>();
@@ -123,12 +200,34 @@ namespace VUV_Projekti
             Console.WriteLine("Unesite odabir novog voditelja");
            try
            {
-                int odabirNovogVoditelja = Convert.ToInt32(Console.ReadLine()) - 1;
-                _idVoditelja = lClanovaBezVoditelja[odabirNovogVoditelja].Id;
-           }
+
+                string odabir5;
+                while (true)
+                {
+                    odabir5 = Console.ReadLine();
+                    if (!Int32.TryParse(odabir5, out int _))
+                    {
+                        Console.WriteLine("Pogresan unos. Morate unesti broj");
+                    }
+                    else if (Convert.ToInt32(odabir5) - 1 < 0)
+                    {
+                        Console.WriteLine("Odabir voditelja ne smije biti manji od nula. Ponovite unos");
+                    }
+                    else if (Convert.ToInt32(odabir5) - 1 >= lClanovaBezVoditelja.Count)
+                    {
+                        Console.WriteLine("Odabir Voditelja ne smije biti veci od " + lClanovaBezVoditelja.Count + ". Ponovite unos");
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                int odabir2 = Convert.ToInt32(odabir5) - 1;
+
+                _idVoditelja = lClanovaBezVoditelja[odabir2].Id;
+            }
             catch(Exception e)
             {
-                Console.WriteLine(e.Message);
             }
         }
 
@@ -173,8 +272,15 @@ namespace VUV_Projekti
             try
             {
                 Console.WriteLine("Unesite novu vrijednost");
-                double novaVrijednost = Convert.ToDouble(Console.ReadLine());
-                _Vrijednost = novaVrijednost;
+                string novaVrijednost = Console.ReadLine();
+                double vrijednost;
+                while(!Double.TryParse(novaVrijednost, out double _))
+                {
+                    Console.WriteLine("Pogresan unos. Morate unesti broj.");
+                    novaVrijednost = Console.ReadLine();
+                }
+                vrijednost = Convert.ToDouble(novaVrijednost);
+                _Vrijednost = vrijednost;
             }
             catch(Exception e)
             {
@@ -213,8 +319,30 @@ namespace VUV_Projekti
             }
             try
             {
-                int odabir = Convert.ToInt32(Console.ReadLine())-1;
-                imeNositelja = $"{listaClanovaProjektaBezNositelja[odabir].Ime} {listaClanovaProjektaBezNositelja[odabir].Prezime}";
+
+                string odabir5;
+                while (true)
+                {
+                    odabir5 = Console.ReadLine();
+                    if (!Int32.TryParse(odabir5, out int _))
+                    {
+                        Console.WriteLine("Pogresan unos. Morate unesti broj");
+                    }
+                    else if (Convert.ToInt32(odabir5) - 1 < 0)
+                    {
+                        Console.WriteLine("Odabir Nositelja ne smije biti manji od nula. Ponovite unos");
+                    }
+                    else if (Convert.ToInt32(odabir5) - 1 >= listaClanovaProjektaBezNositelja.Count)
+                    {
+                        Console.WriteLine("Odabir Nositelja ne smije biti veci od " + listaClanovaProjektaBezNositelja.Count + ". Ponovite unos");
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                int odabir2 = Convert.ToInt32(odabir5) - 1;
+                imeNositelja = $"{listaClanovaProjektaBezNositelja[odabir2].Ime} {listaClanovaProjektaBezNositelja[odabir2].Prezime}";
                 _Nositelj = imeNositelja;
             }catch(Exception e)
             {

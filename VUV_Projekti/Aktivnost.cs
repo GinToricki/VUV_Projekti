@@ -52,6 +52,20 @@ namespace VUV_Projekti
             _obrisan = false;
         }
 
+        public Aktivnost(Guid idAktivnosti, string naziv, string opis, DateTime VP, DateTime VK, Lokacija lokacija, List<ClanProjekta> clanProj, Guid idLokacije, List<Guid> lIdClanovaProjekta, bool status)
+        {
+            _idAktivnosti = idAktivnosti;
+            _Naziv = naziv;
+            _Opis = opis;
+            _VrijemePocetka = VP;
+            _VrijemeKraja = VK;
+            _Lokacija = lokacija;
+            _ClanProjekta = clanProj;
+            _idLokacije = idLokacije;
+            _lIdClanovaProjekta = lIdClanovaProjekta;
+            _obrisan = status;
+        }
+
         public Aktivnost(Guid idAktivnosti, string naziv, string opis, DateTime VP, DateTime VK, Lokacija lokacija, List<ClanProjekta> clanProj, Guid idLokacije, List<Guid> lIdClanovaProjekta, Guid idProj, bool status)
         {
             _idAktivnosti = idAktivnosti;
@@ -90,6 +104,7 @@ namespace VUV_Projekti
         public DateTime VrijemeKraja
         {
             get { return _VrijemeKraja; }
+            set { _VrijemeKraja = value; }
         }
 
         public Lokacija Lokacija
@@ -116,6 +131,12 @@ namespace VUV_Projekti
         {
             get { return _idProjekta; }
             set { _idProjekta = value; }
+        }
+
+        public bool Status
+        {
+            get { return _obrisan; }
+            set { _obrisan = value; }
         }
     }
 }

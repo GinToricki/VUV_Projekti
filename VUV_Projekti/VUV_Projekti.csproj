@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Aktivnost.cs" />
     <Compile Include="ClanProjekta.cs" />
+    <Compile Include="DatotekaException.cs" />
     <Compile Include="DatotetaKlasa.cs" />
     <Compile Include="Izbornik.cs" />
     <Compile Include="Lokacija.cs" />

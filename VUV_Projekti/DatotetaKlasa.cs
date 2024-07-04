@@ -35,14 +35,25 @@ namespace VUV_Projekti
             XmlNodeList clanovi = xmlObject.SelectNodes("//Clanovi/ClanProjekta");
             foreach(XmlNode clanProjekta in clanovi)
             {
-                clanoviProjekta.Add(new ClanProjekta(
-                    new Guid(clanProjekta.Attributes["_id"].Value),
-                    clanProjekta.Attributes["_ime"].Value,
-                    clanProjekta.Attributes["_prezime"].Value,
-                    clanProjekta.Attributes["_oib"].Value,
-                    DateTime.Parse(clanProjekta.Attributes["_dob"].Value),
-                    Convert.ToBoolean(clanProjekta.Attributes["_obrisan"].Value)
-                    ));
+                if(!DateTime.TryParse(clanProjekta.Attributes["_dob"].Value, out DateTime _))
+                {
+                    string poruka = $"Za clana s id: {clanProjekta.Attributes["_id"].Value} nije pravilno unesen dateTime";
+                    throw new DatotekaException(poruka);
+                }
+                try
+                {
+                    clanoviProjekta.Add(new ClanProjekta(
+                   new Guid(clanProjekta.Attributes["_id"].Value),
+                   clanProjekta.Attributes["_ime"].Value,
+                   clanProjekta.Attributes["_prezime"].Value,
+                   clanProjekta.Attributes["_oib"].Value,
+                   DateTime.Parse(clanProjekta.Attributes["_dob"].Value),
+                   Convert.ToBoolean(clanProjekta.Attributes["_obrisan"].Value)
+                   ));
+                }catch(DatotekaException e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
 
             listaClanovaProjekta = clanoviProjekta;
@@ -105,21 +116,44 @@ namespace VUV_Projekti
             XmlNodeList aktivnosti = xmlObject.SelectNodes("//Aktivnosti/Aktivnost");
             foreach (XmlNode ak in aktivnosti)
             {
-                List<Guid> listaId = new List<Guid>();
-                for(XmlNode i = ak.FirstChild.FirstChild; i!=null;i = i.NextSibling)
+                try
                 {
-                    listaId.Add(new Guid(i.Attributes["_id"].Value));
+                    if (Boolean.TryParse(ak.Attributes["_obrisan"].Value, out bool _))
+                    {
+                        string pogreska = $"za {ak.Attributes["_naziv"].Value} ne valja vrijednost atributa obrisan tipa boolean";
+                        throw new DatotekaException(pogreska);
+                    }
+                    if (!DateTime.TryParse(ak.Attributes["_vp"].Value, out DateTime _))
+                    {
+                        string poruka = $"Za aktivnost s id: {ak.Attributes["_id"].Value} nije pravilno unesen dateTime";
+                        throw new DatotekaException(poruka);
+                    }
+                    if (!DateTime.TryParse(ak.Attributes["_vk"].Value, out DateTime _))
+                    {
+                        string poruka = $"Za aktivnost s id: {ak.Attributes["_id"].Value} nije pravilno unesen dateTime";
+                        throw new DatotekaException(poruka);
+                    }
+                    List<Guid> listaId = new List<Guid>();
+                    for (XmlNode i = ak.FirstChild.FirstChild; i != null; i = i.NextSibling)
+                    {
+                        listaId.Add(new Guid(i.Attributes["_id"].Value));
+                    }
+                    lAktivnosti.Add(new Aktivnost(new Guid(ak.Attributes["_id"].Value),
+                        ak.Attributes["_naziv"].Value,
+                        ak.Attributes["_opis"].Value,
+                        DateTime.Parse(ak.Attributes["_vp"].Value),
+                        DateTime.Parse(ak.Attributes["_vk"].Value),
+                        null,
+                        null,
+                        new Guid(ak.Attributes["_idLokacije"].Value),
+                        listaId,
+                        new Guid(ak.Attributes["_idProj"].Value),
+                        bool.Parse(ak.Attributes["_obrisan"].Value)));
                 }
-                lAktivnosti.Add(new Aktivnost(new Guid(ak.Attributes["_id"].Value),
-                    ak.Attributes["_naziv"].Value,
-                    ak.Attributes["_opis"].Value,
-                    DateTime.Parse(ak.Attributes["_vp"].Value),
-                    DateTime.Parse(ak.Attributes["_vk"].Value),
-                    null,
-                    null,
-                    new Guid(ak.Attributes["_idLokacije"].Value),
-                    listaId,
-                    new Guid(ak.Attributes["_idProj"].Value)));
+                catch(DatotekaException e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
 
             listaAktivnosti = lAktivnosti;
@@ -175,6 +209,12 @@ namespace VUV_Projekti
                 XmlAttribute idProj = xmlObject.CreateAttribute("_idProj");
                 idProj.Value = ak.IdProjekta.ToString() ;
                 noviNode.Attributes.Append(idProj);
+
+
+                XmlAttribute obrisanAttr = xmlObject.CreateAttribute("_obrisan");
+                obrisanAttr.Value = ak.Status.ToString();
+                noviNode.Attributes.Append(obrisanAttr);
+
                 noviNode.AppendChild(clanoviNode);
                 projektNode.AppendChild(noviNode);
             }
@@ -198,26 +238,34 @@ namespace VUV_Projekti
             XmlNodeList projekti= xmlObject.SelectNodes("//Projekti/Projekt");
             foreach (XmlNode p in projekti)
             {
-                List<Guid> listaIdClanova = new List<Guid>();
-                List<Guid> listaIdAktivnosti = new List<Guid>();
-                for (XmlNode i = p.FirstChild.FirstChild; i != null; i = i.NextSibling)
+                try
                 {
-                    listaIdClanova.Add(new Guid(i.Attributes["_id"].Value));
+                    List<Guid> listaIdClanova = new List<Guid>();
+                    List<Guid> listaIdAktivnosti = new List<Guid>();
+                    for (XmlNode i = p.FirstChild.FirstChild; i != null; i = i.NextSibling)
+                    {
+                        listaIdClanova.Add(new Guid(i.Attributes["_id"].Value));
+                    }
+                    for (XmlNode i = p.LastChild.FirstChild; i != null; i = i.NextSibling)
+                    {
+                        listaIdAktivnosti.Add(new Guid(i.Attributes["_id"].Value));
+                    }
+                    lProjekta.Add(new Projekt(new Guid(p.Attributes["_id"].Value),
+                        p.Attributes["_ime"].Value,
+                        listaIdAktivnosti,
+                        listaIdClanova,
+                        new Guid(p.Attributes["_idVoditelja"].Value),
+                        p.Attributes["_nositelj"].Value,
+                        new Guid(p.Attributes["_idLokacije"].Value),
+                        Convert.ToDouble(p.Attributes["_vrijednost"].Value),
+                        bool.Parse(p.Attributes["_obrisan"].Value)
+                        ));
                 }
-                for(XmlNode i = p.LastChild.FirstChild; i != null; i = i.NextSibling)
+                catch(Exception e)
                 {
-                    listaIdAktivnosti.Add(new Guid(i.Attributes["_id"].Value));
+
                 }
-                lProjekta.Add(new Projekt(new Guid(p.Attributes["_id"].Value),
-                    p.Attributes["_ime"].Value,
-                    listaIdAktivnosti,
-                    listaIdClanova,
-                    new Guid(p.Attributes["_idVoditelja"].Value),
-                    p.Attributes["_nositelj"].Value,
-                    new Guid(p.Attributes["_idLokacije"].Value),
-                    Convert.ToDouble(p.Attributes["_vrijednost"].Value),
-                    bool.Parse(p.Attributes["_obrisan"].Value)
-                    ));
+               
             }
 
            
@@ -305,13 +353,20 @@ namespace VUV_Projekti
             XmlNodeList lokacije = xmlObject.SelectNodes("//Lokacije/Lokacija");
             foreach (XmlNode lok in lokacije)
             {
-                lLokacija.Add(new Lokacija(new Guid(lok.Attributes["_id"].Value),
-                    lok.Attributes["_adresa"].Value,
-                    lok.Attributes["_pBroj"].Value,
-                    lok.Attributes["_grad"].Value,
-                    lok.Attributes["_lat"].Value,
-                    lok.Attributes["_long"].Value
-                    )) ;
+                try
+                {
+                    lLokacija.Add(new Lokacija(new Guid(lok.Attributes["_id"].Value),
+                   lok.Attributes["_adresa"].Value,
+                   lok.Attributes["_pBroj"].Value,
+                   lok.Attributes["_grad"].Value,
+                   lok.Attributes["_lat"].Value,
+                   lok.Attributes["_long"].Value
+                   ));
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
             listaLokacija = lLokacija;
             return lLokacija;
