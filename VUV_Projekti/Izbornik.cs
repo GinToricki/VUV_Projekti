@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ConsoleTables;
+using System.Globalization;
 
 namespace VUV_Projekti
 {
@@ -90,15 +91,36 @@ namespace VUV_Projekti
                 Console.WriteLine($"{i+1}. {listaAktivnihClanova[i].Ime} {listaAktivnihClanova[i].Prezime} ({listaAktivnihClanova[i].Oib})");
             }
             Console.WriteLine("Unesite odabir kojeg clana zelite izbrisati");
-            int odabir = Convert.ToInt32(Console.ReadLine()) -1;
-
-            foreach(Projekt proj in ulaznaListaProjekata)
+            string odabir = "";
+            while (true)
             {
-                if (proj.ListaIdClanova.Contains(listaAktivnihClanova[odabir].Id))
+                odabir = Console.ReadLine();
+                if (!Int32.TryParse(odabir, out int _))
+                {
+                    Console.WriteLine("Pogresan unos. Morate unesti broj");
+                }
+                else if (Convert.ToInt32(odabir) - 1 < 0)
+                {
+                    Console.WriteLine("Odabir clana ne smije biti manji od nula. Ponovite unos");
+                }
+                else if (Convert.ToInt32(odabir) - 1 >= listaAktivnihClanova.Count)
+                {
+                    Console.WriteLine("Odabir clana ne smije biti veci od " + listaAktivnihClanova.Count + ". Ponovite unos");
+                }
+                else
+                {
+                    break;
+                }
+            }
+            int odabir2 = Convert.ToInt32(odabir) - 1;
+
+            foreach (Projekt proj in ulaznaListaProjekata)
+            {
+                if (proj.ListaIdClanova.Contains(listaAktivnihClanova[odabir2].Id))
                 {
                     if (proj.ListaIdClanova.Count == 1)
                     {
-                        proj.ListaIdClanova.Remove(listaAktivnihClanova[odabir].Id);
+                        proj.ListaIdClanova.Remove(listaAktivnihClanova[odabir2].Id);
                         proj.Obrisan = true;
                         Console.WriteLine($"Projekt: {proj.ImeProjekta} postaje neaktivan");
                     }
@@ -106,7 +128,7 @@ namespace VUV_Projekti
             }
             foreach (ClanProjekta cp in ulaznaListaClanova)
             {
-                if(cp.Id == listaAktivnihClanova[odabir].Id)
+                if(cp.Id == listaAktivnihClanova[odabir2].Id)
                 {
                     cp.Obrisan = true;
                     Console.WriteLine($"Izbrisali smo clana {cp.Ime} {cp.Prezime} ({cp.Oib})");
@@ -169,12 +191,13 @@ namespace VUV_Projekti
                         Console.WriteLine("Unesite oib");
                         oib = Console.ReadLine();
                     } while (!PotvrdiOib(ulaznaListaClanova, oib));
-                    Console.WriteLine("Unesite dob");
+                    Console.WriteLine("Unesite datum rodenja u formatu (dd/MM/yyyy/)");
                     string dobString = Console.ReadLine(); //Dodati da pregleda string
-                    DateTime dob = DateTime.Parse(dobString);
-                    ClanProjekta noviClan = new ClanProjekta(new Guid(), imeClana, prezimeClana, oib, dob);
+                    DateTime dob = DateTime.ParseExact(dobString, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    ClanProjekta noviClan = new ClanProjekta(Guid.NewGuid(), imeClana, prezimeClana, oib, dob);
                     ulaznaListaClanova.Add(noviClan);
                     dk.ZapisiClanove(ulaznaListaClanova);
+                    break;
                 }
             }
             catch(Exception e)
@@ -490,9 +513,29 @@ namespace VUV_Projekti
             {
                 Console.WriteLine($"{i+1}. {ulaznaListaProjekata[i].ImeProjekta}");
             }
-            int odabir = Convert.ToInt32(Console.ReadLine()) - 1;
-
-            return ulaznaListaProjekata[odabir].IdProjekta;
+            string odabir = "";
+            while (true)
+            {
+                odabir = Console.ReadLine();
+                if (!Int32.TryParse(odabir, out int _))
+                {
+                    Console.WriteLine("Pogresan unos. Morate unesti broj");
+                }
+                else if (Convert.ToInt32(odabir) - 1 < 0)
+                {
+                    Console.WriteLine("Odabir projekta ne smije biti manji od nula. Ponovite unos");
+                }
+                else if (Convert.ToInt32(odabir) - 1 >= ulaznaListaProjekata.Count)
+                {
+                    Console.WriteLine("Odabir projekta ne smije biti veci od " + ulaznaListaProjekata.Count + ". Ponovite unos");
+                }
+                else
+                {
+                    break;
+                }
+            }
+            int odabir2 = Convert.ToInt32(odabir) - 1;
+            return ulaznaListaProjekata[odabir2].IdProjekta;
         }
 
 
@@ -505,7 +548,7 @@ namespace VUV_Projekti
             {
                 while (vrti)
                 {
-                    Console.WriteLine("1. Za dodavanje Clanova u aktivnost\n 2. Za izlaz");
+                    Console.WriteLine("1. Za dodavanje Clanova u aktivnost\n2. Za izlaz");
                     string odabirSwitch = Console.ReadLine();
                     switch (odabirSwitch)
                     {
@@ -521,6 +564,12 @@ namespace VUV_Projekti
                                 {
                                     lAktivnihClanova.Add(ulaznaListaClanova[i]);
                                 }
+                            }
+                            if(lAktivnihClanova.Count == 0)
+                            {
+                                Console.WriteLine("Nema clanova za dodati.");
+                                vrti = false;
+                                break;
                             }
                             for (int i = 0; i < lAktivnihClanova.Count; i++)
                             {
@@ -580,7 +629,13 @@ namespace VUV_Projekti
                                 lAktivnihClanova.Add(ulaznaListaClanova[i]);
                             }
                         }
-                        for(int i = 0; i < lAktivnihClanova.Count; i++)
+                        if (lAktivnihClanova.Count == 0)
+                        {
+                            Console.WriteLine("Nema clanova za dodati.");
+                            vrti = false;
+                            break;
+                        }
+                        for (int i = 0; i < lAktivnihClanova.Count; i++)
                         {
                             Console.WriteLine($"{i+1}. {lAktivnihClanova[i].Ime} {lAktivnihClanova[i].Prezime} ({lAktivnihClanova[i].Oib})");
                         }
@@ -850,6 +905,7 @@ namespace VUV_Projekti
                     listaAktivnosti.Add(a.IdAktivnosti);
                     ulaznaListaProjekata.Add(projekt);
                     dk.ZapisiProjekte(ulaznaListaProjekata);
+                    break;
                 }
                 catch (Exception e)
                 {
@@ -865,22 +921,44 @@ namespace VUV_Projekti
                 Console.WriteLine($"{i+1}. {ulaznaListaProjekata[i].ImeProjekta}");
             }
             Console.WriteLine("Odaberite projekt koji zelite azurirati");
+            string odabir = "";
+            while (true)
+            {
+                odabir = Console.ReadLine();
+                if (!Int32.TryParse(odabir, out int _))
+                {
+                    Console.WriteLine("Pogresan unos. Morate unesti broj");
+                }
+                else if (Convert.ToInt32(odabir) - 1 < 0)
+                {
+                    Console.WriteLine("Odabir projekta ne smije biti manji od nula. Ponovite unos");
+                }
+                else if (Convert.ToInt32(odabir) - 1 >= ulaznaListaProjekata.Count)
+                {
+                    Console.WriteLine("Odabir projekta ne smije biti veci od " + ulaznaListaProjekata.Count + ". Ponovite unos");
+                }
+                else
+                {
+                    break;
+                }
+            }
+            int odabir2 = Convert.ToInt32(odabir) - 1;
             try
             {
-                int odabir = Convert.ToInt32(Console.ReadLine())-1;
-                Console.WriteLine($"Azuriramo projekt {ulaznaListaProjekata[odabir].ImeProjekta}");
+                
+                Console.WriteLine($"Azuriramo projekt {ulaznaListaProjekata[odabir2].ImeProjekta}");
                 Console.WriteLine("1. Promjena Nositelja\n2. Promjena Voditelja \n3. Promjena Vrijednosti");
                 string odabirAzuriranja = Console.ReadLine();
                 switch (odabirAzuriranja)
                 {
                     case "1":
-                        ulaznaListaProjekata[odabir].PromjeniNositelja(ulaznaListaClanova);
+                        ulaznaListaProjekata[odabir2].PromjeniNositelja(ulaznaListaClanova);
                         break;
                     case "2":
-                        ulaznaListaProjekata[odabir].PromjenaVoditelja(ulaznaListaClanova);
+                        ulaznaListaProjekata[odabir2].PromjenaVoditelja(ulaznaListaClanova);
                         break;
                     case "3":
-                        ulaznaListaProjekata[odabir].PromjeniVrijednost();
+                        ulaznaListaProjekata[odabir2].PromjeniVrijednost();
                         break;
                     default:
                         Console.WriteLine("Pogreska");

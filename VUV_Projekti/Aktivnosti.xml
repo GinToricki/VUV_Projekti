@@ -1,127 +1,95 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Aktivnosti>
-  <Aktivnost _id="984f07f7-c777-4363-9a1a-d11cddb15e1e" _naziv="Promjeni sučelje" _opis="Promjeni sučelje aplikacije" _vp="5/2/2024 1:13:21 PM" _vk="7/1/2024 1:13:21 PM" _idLokacije="667ab5db-7094-4158-b3b0-47087d3da065" _idProj="b4fcc930-5c5e-4e8e-b1f8-66a6bb9a7e7e">
+  <Aktivnost _id="fb4d9c4f-ae83-40d9-b025-fd2280146d54" _naziv="Nabavi dozvole" _opis="Nabaviti potrebne dozvole za vrstu bazena, provjeriti lokalne propise" _vp="5/5/2024 2:02:08 AM" _vk="7/4/2024 2:02:08 AM" _idLokacije="c2f8a76e-7c12-4f94-bebc-44a4d9365fb6" _idProj="7632a340-ba36-491f-9eb5-2924d9222729">
     <Clanovi>
-      <Clan _id="357d812c-238f-42f0-ae8c-d647f314a1b2" />
-      <Clan _id="8cc4c878-d817-4c81-a597-ed691648f114" />
-      <Clan _id="c5ce9528-eceb-4c16-bcdd-7f01c6d11049" />
+      <Clan _id="2ae3ab68-e568-48d1-8e86-8cdd9aa434b8" />
+      <Clan _id="bcadacfe-56bd-4c85-85ef-d118b5c16bd1" />
+      <Clan _id="fdfc28c4-dc86-4a91-b864-3ace17fbeaad" />
     </Clanovi>
   </Aktivnost>
-  <Aktivnost _id="cc0fed2d-9255-43da-bb7d-d72cf76c735e" _naziv="Update Logo" _opis="Promjeni stari logo u novi poboljsani logo" _vp="6/1/2024 1:13:21 PM" _vk="7/1/2024 1:13:21 PM" _idLokacije="b25f961f-9645-447c-961e-ce5433c900a6" _idProj="5e35d346-7b04-438f-8602-1a25f1b1d811">
+  <Aktivnost _id="9a388ae3-ee28-4834-961c-4c9c7a5e9b46" _naziv="Dizajnirati bazen" _opis="Uspostavite konačni dizajn bazena, uključujući oblikovanje, materijale, opremu i značajke." _vp="6/4/2024 2:02:08 AM" _vk="7/4/2024 2:02:08 AM" _idLokacije="c2f8a76e-7c12-4f94-bebc-44a4d9365fb6" _idProj="65784e5e-02f7-40e8-bbda-95d34bfe8666">
     <Clanovi>
-      <Clan _id="4d6c08a9-dd4b-433a-9c15-cc6b538b47ac" />
-      <Clan _id="54a2fe28-7850-4c3b-9c8f-7754c39f6fee" />
-      <Clan _id="15eb7385-9145-4900-afb4-2a90e5544dc3" />
+      <Clan _id="fcd22778-15ed-4e85-bb0b-5ab13008b9f2" />
+      <Clan _id="b82e894e-40a8-4254-9041-99eef6013b6c" />
     </Clanovi>
   </Aktivnost>
-  <Aktivnost _id="3bf0422f-3238-4ac7-b467-8f54f191c7d4" _naziv="Kupi materijal" _opis="Kupi novi materijal" _vp="6/11/2024 1:13:21 PM" _vk="7/1/2024 1:13:21 PM" _idLokacije="b25f961f-9645-447c-961e-ce5433c900a6" _idProj="a541c0d6-fda9-4604-9abc-101c18544959">
+  <Aktivnost _id="c7b66c14-5cde-4589-b40f-028e930055da" _naziv="Iskop i priprema terena" _opis="Pripremite teren za izgradnju, uključujući iskopavanje rupe i izravnavanje tla." _vp="6/14/2024 2:02:08 AM" _vk="7/4/2024 2:02:08 AM" _idLokacije="c2f8a76e-7c12-4f94-bebc-44a4d9365fb6" _idProj="00000000-0000-0000-0000-000000000000">
     <Clanovi>
-      <Clan _id="4f929b80-ee2d-45b4-89a2-b4607baf3240" />
-      <Clan _id="59c0fda0-6891-4b3c-9404-122a3920428a" />
-      <Clan _id="41b4e015-a27c-40f6-9925-e0a8c3ba99e0" />
+      <Clan _id="c2ec396d-8a11-4965-a43d-b88a3edaf91a" />
     </Clanovi>
   </Aktivnost>
-  <Aktivnost _id="62ff4ae2-7825-4b4a-88c2-cdcf6343733f" _naziv="Business meeting" _opis="Poslovni sastanak s klijentom" _vp="6/6/2024 1:13:21 PM" _vk="7/1/2024 1:13:21 PM" _idLokacije="b8b1b4c4-b21f-4337-b374-f41171e22980" _idProj="66f8df75-9616-4a2b-8267-ecedc9e54326">
+  <Aktivnost _id="68c6565e-2a09-469c-9844-e1fe65fc6d1f" _naziv="Izgradnja strukture bazena" _opis="Ovisno o vrsti bazena, to može uključivati ​​izgradnju betonskih zidova, postavljanje liner-a ili montažu metalnih panela." _vp="6/9/2024 2:02:08 AM" _vk="7/4/2024 2:02:08 AM" _idLokacije="c2f8a76e-7c12-4f94-bebc-44a4d9365fb6" _idProj="00000000-0000-0000-0000-000000000000">
     <Clanovi>
-      <Clan _id="391cbf7a-dbce-453c-8a6a-5ac4363e13b4" />
-      <Clan _id="7a55c757-7deb-4115-ac92-8d9eaf08c883" />
-      <Clan _id="1a551c63-3b52-4b7c-8b72-a25cd1d8ce8f" />
+      <Clan _id="c2ec396d-8a11-4965-a43d-b88a3edaf91a" />
     </Clanovi>
   </Aktivnost>
-  <Aktivnost _id="60987e23-7116-4573-9cd8-208a7fedeae1" _naziv="Obojaj Ured" _opis="Obojaj ured iz zute u plavu" _vp="6/21/2024 1:13:21 PM" _vk="7/1/2024 1:13:21 PM" _idLokacije="b8b1b4c4-b21f-4337-b374-f41171e22980" _idProj="8545ee45-7b45-430a-8f8f-6636331936e8">
+  <Aktivnost _id="c1d4242b-0e9b-4d7f-b9e0-7161a3135e2a" _naziv="Uravnotežite kemiju vode" _opis="Dodajte potrebne kemikalije za održavanje čiste i zdrave vode." _vp="6/24/2024 2:02:08 AM" _vk="7/4/2024 2:02:08 AM" _idLokacije="c2f8a76e-7c12-4f94-bebc-44a4d9365fb6" _idProj="00000000-0000-0000-0000-000000000000">
     <Clanovi>
-      <Clan _id="15c98536-e916-4d52-8ef7-f3c1e3379d15" />
-      <Clan _id="71897c2b-4ab5-4705-87a4-64b90dbb38aa" />
-      <Clan _id="9ea33193-3b29-41f7-965a-71b3169e72f5" />
+      <Clan _id="2ae3ab68-e568-48d1-8e86-8cdd9aa434b8" />
+      <Clan _id="bcadacfe-56bd-4c85-85ef-d118b5c16bd1" />
+      <Clan _id="fdfc28c4-dc86-4a91-b864-3ace17fbeaad" />
     </Clanovi>
   </Aktivnost>
-  <Aktivnost _id="6eaa877d-0e63-4ffc-ac18-523f4f9fc0b9" _naziv="Update Logo" _opis="Promjeni stari logo u novi poboljsani logo" _vp="5/2/2024 1:13:21 PM" _vk="7/1/2024 1:13:21 PM" _idLokacije="667ab5db-7094-4158-b3b0-47087d3da065" _idProj="00000000-0000-0000-0000-000000000000">
+  <Aktivnost _id="6a52f9f4-4e46-4178-92f4-f7b538d824fc" _naziv="Razvijte priču" _opis="Smislite privlačnu priču koja će voditi igru i angažirati igrače." _vp="5/5/2024 2:02:08 AM" _vk="7/4/2024 2:02:08 AM" _idLokacije="fc3a3389-7836-4a61-99c7-eab7aafe949e" _idProj="00000000-0000-0000-0000-000000000000">
     <Clanovi>
-      <Clan _id="357d812c-238f-42f0-ae8c-d647f314a1b2" />
-      <Clan _id="8cc4c878-d817-4c81-a597-ed691648f114" />
-      <Clan _id="c5ce9528-eceb-4c16-bcdd-7f01c6d11049" />
+      <Clan _id="937ea9c3-c078-4d8b-bec8-394ea57e0b33" />
+      <Clan _id="99101ff2-7f14-4ee8-a490-21f4af03eec0" />
+      <Clan _id="a944ed09-2eca-40c1-badf-d1fa291b2e92" />
     </Clanovi>
   </Aktivnost>
-  <Aktivnost _id="097398c5-28c7-472f-a3fe-8ea5420836b0" _naziv="Promjeni sučelje" _opis="Promjeni sučelje aplikacije" _vp="6/1/2024 1:13:21 PM" _vk="7/1/2024 1:13:21 PM" _idLokacije="b25f961f-9645-447c-961e-ce5433c900a6" _idProj="00000000-0000-0000-0000-000000000000">
+  <Aktivnost _id="93488ea1-abe0-4856-a17f-5cae5ee7b095" _naziv="Definirati likove" _opis="Kreirajte upečatljive likove s kojima će se igrači moći poistovjetiti i za koje će im biti stalo." _vp="6/4/2024 2:02:08 AM" _vk="7/4/2024 2:02:08 AM" _idLokacije="fc3a3389-7836-4a61-99c7-eab7aafe949e" _idProj="00000000-0000-0000-0000-000000000000">
     <Clanovi>
-      <Clan _id="4d6c08a9-dd4b-433a-9c15-cc6b538b47ac" />
-      <Clan _id="54a2fe28-7850-4c3b-9c8f-7754c39f6fee" />
-      <Clan _id="15eb7385-9145-4900-afb4-2a90e5544dc3" />
+      <Clan _id="99101ff2-7f14-4ee8-a490-21f4af03eec0" />
     </Clanovi>
   </Aktivnost>
-  <Aktivnost _id="054d1c26-4e40-4d8b-ad23-f155bc517213" _naziv="Obojaj Ured" _opis="Obojaj ured iz zute u plavu" _vp="6/11/2024 1:13:21 PM" _vk="7/1/2024 1:13:21 PM" _idLokacije="b25f961f-9645-447c-961e-ce5433c900a6" _idProj="00000000-0000-0000-0000-000000000000">
+  <Aktivnost _id="46d77748-2027-4a1e-b9dd-23421b2c672d" _naziv="Izradite prototip" _opis="Kreirajte jednostavnu verziju igre kako biste testirali koncepte i prikupili povratne informacije." _vp="6/14/2024 2:02:08 AM" _vk="7/4/2024 2:02:08 AM" _idLokacije="fc3a3389-7836-4a61-99c7-eab7aafe949e" _idProj="00000000-0000-0000-0000-000000000000">
     <Clanovi>
-      <Clan _id="4f929b80-ee2d-45b4-89a2-b4607baf3240" />
-      <Clan _id="59c0fda0-6891-4b3c-9404-122a3920428a" />
-      <Clan _id="41b4e015-a27c-40f6-9925-e0a8c3ba99e0" />
+      <Clan _id="f17af670-6337-4542-b1c0-140a213a3de0" />
+      <Clan _id="fe8d03cd-e648-46b0-8fa2-37753bb6e5af" />
     </Clanovi>
   </Aktivnost>
-  <Aktivnost _id="6ad3e153-dd62-4220-a509-51c8136a9f74" _naziv="Kupi materijal" _opis="Kupi novi materijal" _vp="6/6/2024 1:13:21 PM" _vk="7/1/2024 1:13:21 PM" _idLokacije="b8b1b4c4-b21f-4337-b374-f41171e22980" _idProj="00000000-0000-0000-0000-000000000000">
+  <Aktivnost _id="2b56a949-201c-4862-a6ce-e61ce0de304f" _naziv="Provedite testiranje igrača" _opis="Omogućiti razlicitim ljudima da igraju igru." _vp="6/9/2024 2:02:08 AM" _vk="7/4/2024 2:02:08 AM" _idLokacije="fc3a3389-7836-4a61-99c7-eab7aafe949e" _idProj="00000000-0000-0000-0000-000000000000">
     <Clanovi>
-      <Clan _id="391cbf7a-dbce-453c-8a6a-5ac4363e13b4" />
-      <Clan _id="7a55c757-7deb-4115-ac92-8d9eaf08c883" />
-      <Clan _id="1a551c63-3b52-4b7c-8b72-a25cd1d8ce8f" />
+      <Clan _id="bed9c69b-29ea-46a9-b742-4bbc70eaa537" />
+      <Clan _id="1599fff2-0ecf-4c80-919f-9f296dcbf63c" />
+      <Clan _id="bfc64549-4b05-478f-82f0-5796ad0237c2" />
     </Clanovi>
   </Aktivnost>
-  <Aktivnost _id="713d4cf6-586d-4d88-8b98-b5221ff37805" _naziv="Business meeting" _opis="Poslovni sastanak s klijentom" _vp="6/21/2024 1:13:21 PM" _vk="7/1/2024 1:13:21 PM" _idLokacije="b8b1b4c4-b21f-4337-b374-f41171e22980" _idProj="00000000-0000-0000-0000-000000000000">
+  <Aktivnost _id="ac44675f-04c8-4361-b416-856e9a0a1145" _naziv="Uravnotežite igru" _opis="Pobrinite se da je igra izazovna, ali i pravedna za sve igrače." _vp="6/24/2024 2:02:08 AM" _vk="7/4/2024 2:02:08 AM" _idLokacije="fc3a3389-7836-4a61-99c7-eab7aafe949e" _idProj="00000000-0000-0000-0000-000000000000">
     <Clanovi>
-      <Clan _id="15c98536-e916-4d52-8ef7-f3c1e3379d15" />
-      <Clan _id="71897c2b-4ab5-4705-87a4-64b90dbb38aa" />
-      <Clan _id="9ea33193-3b29-41f7-965a-71b3169e72f5" />
+      <Clan _id="937ea9c3-c078-4d8b-bec8-394ea57e0b33" />
+      <Clan _id="99101ff2-7f14-4ee8-a490-21f4af03eec0" />
+      <Clan _id="a944ed09-2eca-40c1-badf-d1fa291b2e92" />
     </Clanovi>
   </Aktivnost>
-  <Aktivnost _id="2b9aaff0-c4da-49ae-89d5-a177fe989d79" _naziv="Obojaj Ured" _opis="Obojaj ured iz zute u plavu" _vp="5/2/2024 1:13:21 PM" _vk="7/1/2024 1:13:21 PM" _idLokacije="667ab5db-7094-4158-b3b0-47087d3da065" _idProj="00000000-0000-0000-0000-000000000000">
+  <Aktivnost _id="f4eb9bcd-ac0d-4c55-b2eb-d6a8694c6c8b" _naziv="Odredite cilj i viziju kluba" _opis="Definirajte što želite postići s klubom, za koje dobne kategorije će biti namijenjen i kakvu atmosferu želite stvoriti." _vp="5/5/2024 2:02:08 AM" _vk="7/4/2024 2:02:08 AM" _idLokacije="c2f8a76e-7c12-4f94-bebc-44a4d9365fb6" _idProj="00000000-0000-0000-0000-000000000000">
     <Clanovi>
-      <Clan _id="357d812c-238f-42f0-ae8c-d647f314a1b2" />
-      <Clan _id="8cc4c878-d817-4c81-a597-ed691648f114" />
-      <Clan _id="c5ce9528-eceb-4c16-bcdd-7f01c6d11049" />
+      <Clan _id="2ae3ab68-e568-48d1-8e86-8cdd9aa434b8" />
+      <Clan _id="bcadacfe-56bd-4c85-85ef-d118b5c16bd1" />
+      <Clan _id="fdfc28c4-dc86-4a91-b864-3ace17fbeaad" />
     </Clanovi>
   </Aktivnost>
-  <Aktivnost _id="9232cde5-4857-4b12-a0c7-cbe30d69e310" _naziv="Kupi materijal" _opis="Kupi novi materijal" _vp="6/1/2024 1:13:21 PM" _vk="7/1/2024 1:13:21 PM" _idLokacije="b25f961f-9645-447c-961e-ce5433c900a6" _idProj="00000000-0000-0000-0000-000000000000">
+  <Aktivnost _id="5d203266-ef98-4ded-a82d-84ddfc4d5689" _naziv="Registrirajte klub" _opis="Legalizirajte svoj klub kod nadležnih tijela i dobijte potrebne dozvole za rad." _vp="6/4/2024 2:02:08 AM" _vk="7/4/2024 2:02:08 AM" _idLokacije="c2f8a76e-7c12-4f94-bebc-44a4d9365fb6" _idProj="00000000-0000-0000-0000-000000000000">
     <Clanovi>
-      <Clan _id="4d6c08a9-dd4b-433a-9c15-cc6b538b47ac" />
-      <Clan _id="54a2fe28-7850-4c3b-9c8f-7754c39f6fee" />
-      <Clan _id="15eb7385-9145-4900-afb4-2a90e5544dc3" />
+      <Clan _id="fcd22778-15ed-4e85-bb0b-5ab13008b9f2" />
+      <Clan _id="b82e894e-40a8-4254-9041-99eef6013b6c" />
     </Clanovi>
   </Aktivnost>
-  <Aktivnost _id="45e3b063-2104-4c63-8cee-de06aed661fc" _naziv="Business meeting" _opis="Poslovni sastanak s klijentom" _vp="6/11/2024 1:13:21 PM" _vk="7/1/2024 1:13:21 PM" _idLokacije="b25f961f-9645-447c-961e-ce5433c900a6" _idProj="00000000-0000-0000-0000-000000000000">
+  <Aktivnost _id="76394fd0-3d75-4ae2-b31d-4bb83f5a1bbe" _naziv="Otvorete bankovni račun" _opis="Postavite financijski okvir za klub i olakšajte plaćanje troškova.." _vp="6/14/2024 2:02:08 AM" _vk="7/4/2024 2:02:08 AM" _idLokacije="c2f8a76e-7c12-4f94-bebc-44a4d9365fb6" _idProj="00000000-0000-0000-0000-000000000000">
     <Clanovi>
-      <Clan _id="4f929b80-ee2d-45b4-89a2-b4607baf3240" />
-      <Clan _id="59c0fda0-6891-4b3c-9404-122a3920428a" />
-      <Clan _id="41b4e015-a27c-40f6-9925-e0a8c3ba99e0" />
+      <Clan _id="c2ec396d-8a11-4965-a43d-b88a3edaf91a" />
     </Clanovi>
   </Aktivnost>
-  <Aktivnost _id="8fb88214-ee88-4862-8e6d-08298a738300" _naziv="Update Logo" _opis="Promjeni stari logo u novi poboljsani logo" _vp="6/6/2024 1:13:21 PM" _vk="7/1/2024 1:13:21 PM" _idLokacije="b8b1b4c4-b21f-4337-b374-f41171e22980" _idProj="00000000-0000-0000-0000-000000000000">
+  <Aktivnost _id="ae84af91-f766-4051-b7a4-4d7d63005f6a" _naziv="Pronađite trenera" _opis="Angažirajte iskusnog i kvalificiranog trenera koji će voditi timove i pomagati igračima da se razvijaju." _vp="6/9/2024 2:02:08 AM" _vk="7/4/2024 2:02:08 AM" _idLokacije="c2f8a76e-7c12-4f94-bebc-44a4d9365fb6" _idProj="00000000-0000-0000-0000-000000000000">
     <Clanovi>
-      <Clan _id="391cbf7a-dbce-453c-8a6a-5ac4363e13b4" />
-      <Clan _id="7a55c757-7deb-4115-ac92-8d9eaf08c883" />
-      <Clan _id="1a551c63-3b52-4b7c-8b72-a25cd1d8ce8f" />
+      <Clan _id="c2ec396d-8a11-4965-a43d-b88a3edaf91a" />
     </Clanovi>
   </Aktivnost>
-  <Aktivnost _id="1a1cb4e8-aee9-4887-882d-2f0ba8fb03b8" _naziv="Promjeni sučelje" _opis="Promjeni sučelje aplikacije" _vp="6/21/2024 1:13:21 PM" _vk="7/1/2024 1:13:21 PM" _idLokacije="b8b1b4c4-b21f-4337-b374-f41171e22980" _idProj="00000000-0000-0000-0000-000000000000">
+  <Aktivnost _id="b39fcbd5-b83f-46ed-908f-49e1cac9e6fb" _naziv="Pronađite sponzore" _opis="Tražite financijsku podršku od lokalnih tvrtki i organizacija." _vp="6/24/2024 2:02:08 AM" _vk="7/4/2024 2:02:08 AM" _idLokacije="c2f8a76e-7c12-4f94-bebc-44a4d9365fb6" _idProj="00000000-0000-0000-0000-000000000000">
     <Clanovi>
-      <Clan _id="15c98536-e916-4d52-8ef7-f3c1e3379d15" />
-      <Clan _id="71897c2b-4ab5-4705-87a4-64b90dbb38aa" />
-      <Clan _id="9ea33193-3b29-41f7-965a-71b3169e72f5" />
-    </Clanovi>
-  </Aktivnost>
-  <Aktivnost _id="87879a6f-006b-4353-9228-2ba54bf4cc63" _naziv="AktivnostTest" _opis="OpisTest" _vp="7/3/2024 11:48:18 AM" _vk="7/3/2024 11:48:18 AM" _idLokacije="b25f961f-9645-447c-961e-ce5433c900a6" _idProj="5e35d346-7b04-438f-8602-1a25f1b1d811">
-    <Clanovi>
-      <Clan _id="357d812c-238f-42f0-ae8c-d647f314a1b2" />
-      <Clan _id="8cc4c878-d817-4c81-a597-ed691648f114" />
-      <Clan _id="71897c2b-4ab5-4705-87a4-64b90dbb38aa" />
-      <Clan _id="4d6c08a9-dd4b-433a-9c15-cc6b538b47ac" />
-    </Clanovi>
-  </Aktivnost>
-  <Aktivnost _id="3d5064c3-3f51-4d2b-be1b-f399c0d836b5" _naziv="test" _opis="test" _vp="7/3/2024 11:56:54 AM" _vk="7/3/2024 11:56:54 AM" _idLokacije="b25f961f-9645-447c-961e-ce5433c900a6" _idProj="5e35d346-7b04-438f-8602-1a25f1b1d811">
-    <Clanovi>
-      <Clan _id="4d6c08a9-dd4b-433a-9c15-cc6b538b47ac" />
-    </Clanovi>
-  </Aktivnost>
-  <Aktivnost _id="d1877a72-94db-4de5-b677-387ef42e1416" _naziv="test" _opis="test" _vp="7/3/2024 12:00:30 PM" _vk="7/3/2024 12:00:30 PM" _idLokacije="b25f961f-9645-447c-961e-ce5433c900a6" _idProj="5e35d346-7b04-438f-8602-1a25f1b1d811">
-    <Clanovi>
-      <Clan _id="4d6c08a9-dd4b-433a-9c15-cc6b538b47ac" />
-      <Clan _id="54a2fe28-7850-4c3b-9c8f-7754c39f6fee" />
+      <Clan _id="2ae3ab68-e568-48d1-8e86-8cdd9aa434b8" />
+      <Clan _id="bcadacfe-56bd-4c85-85ef-d118b5c16bd1" />
+      <Clan _id="fdfc28c4-dc86-4a91-b864-3ace17fbeaad" />
     </Clanovi>
   </Aktivnost>
 </Aktivnosti>
